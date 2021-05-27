@@ -1,18 +1,14 @@
 {
   "title": "CODE",
   "author": "Matheus Honorato",
-  "headerTitle": "CODE - Programação",
+  "headerTitle": "CODE",
   "description": "Conteúdo de qualidade sobre programação",
   "language": "pt-BR",
   "siteUrl": "https://tailwind-nextjs-starter-blog.vercel.app",
   "siteRepo": "https://github.com/MatheusHonorato/blog",
   "image": "/static/images/avatar.jpg",
-  "socialBanner": "/static/images/twitter-card.png",
-  "email": "address@yoursite.com",
-  "github": "https://github.com",
-  "twitter": "https://twitter.com/Twitter",
-  "facebook": "https://facebook.com",
-  "youtube": "https://youtube.com",
-  "linkedin": "https://www.linkedin.com",
+  "email": "matheuspaixaohonorato@gmail.com",
+  "github": "https://github.com/MatheusHonorato",
+  "linkedin": "https://www.linkedin.com/in/matheus-paixao-honorato",
   "locale": "pt-BR"
 }

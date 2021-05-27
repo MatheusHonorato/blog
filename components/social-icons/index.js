@@ -3,17 +3,13 @@ import Github from './github.svg'
 import Facebook from './facebook.svg'
 import Youtube from './youtube.svg'
 import Linkedin from './linkedin.svg'
-import Twitter from './twitter.svg'
 
 // Icons taken from: https://simpleicons.org/
 
 const components = {
   mail: Mail,
   github: Github,
-  facebook: Facebook,
-  youtube: Youtube,
   linkedin: Linkedin,
-  twitter: Twitter,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {

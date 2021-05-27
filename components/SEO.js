@@ -19,11 +19,6 @@ export const SEO = {
       },
     ],
   },
-  twitter: {
-    handle: siteMetadata.twitter,
-    site: siteMetadata.twitter,
-    cardType: 'summary_large_image',
-  },
   additionalMetaTags: [
     {
       name: 'author',
@@ -83,12 +78,6 @@ export const BlogSeo = ({ title, summary, date, lastmod, url, tags, images = [] 
           description: summary,
           images: featuredImages,
         }}
-        additionalMetaTags={[
-          {
-            name: 'twitter:image',
-            content: featuredImages[0].url,
-          },
-        ]}
       />
       <ArticleJsonLd
         authorName={siteMetadata.author}
