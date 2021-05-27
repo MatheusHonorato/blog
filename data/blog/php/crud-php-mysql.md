@@ -8,7 +8,7 @@ image: '/static/images/crud-php.jpg'
 ---
 
 Fala, galera! Nesse artigo vamos aprender como desenvolver uma aplicação CRUD básica com a biblioteca Mysql I, lib utilizada para se comunicar de maneira nativa com o banco de dados Mysql/MariaDB no PHP.
-Mas afinal o que é um CRUD? De acordo com a mozilla foundation CRUD são as quatro operações básicas de armazenamento persistente: CREATE(criar), READ(ler), UPDATE(atualizar) e DELETE(remover).
+Mas afinal o que é um CRUD? Um CRUD é basicamente uma aplicação que efetua as quatro operações básicas de persistencia de dados, CREATE(criar), READ(ler), UPDATE(atualizar) e DELETE(remover).
 
 E por que é tão importante aprender a desenvolver um CRUD? basicamente qualquer sistema que manipule dados implementará funções de um CRUD, sendo assim essencial para você que está iniciando no mundo do desenvolvimento de software.
 
@@ -91,22 +91,29 @@ try {
 
 Dentro do diretório '/src' temos a pasta '/pages' que contém arquivos responsáveis por gerar nosso html, '/database' com funções que trabalham com nossas querys de banco de dados e '/actions' que é responsável por fazer o meio de campo entre '/database' e '/pages'.
 
+Mas então você se pergunta o porque de não colocarmos sqls, html e consultas ao banco nos mesmos arquivos de forma misturada. Simplesmente porque estariamos dificultando a manutenção da nosssa aplicação deixando nosso app com um código mais poluido e redundante.
+
+Com uma arquitetura ou organização de pastas que divide nosso app em responsabilidades menores que dizem claramente o que fazem facilitamos a manutenção e compreensão de como nosso app funciona, por que tudo fica mais desacoplado.
+
+Ex: Se mudarmos nosso banco de dados basta modificarmos o arquivo 'config.php' que mantém a nossa conexão e talvez o arquivo '/src/database/user.php' que contém as funções php com nossos códigos sql.
+
 ![CRUD PHP SRC](/static/images/src.jpg)
 
 ### /src/pages
 
-Nossos arquivos de pages estão organizados em duas pastas '/user' responsável por armazenar os códigos de nossas páginas e '/partials' responsável por armazenar o código de header e footer que é comum a todas as elas. Todos os nossos arquivos em '/src/pages/user'
+Nossos arquivos de pages estão organizados em duas pastas '/user' responsável por armazenar os códigos de nossas páginas e '/partials' responsável por armazenar o código de header e footer que é comum a todas elas. Todos os nossos arquivos em '/src/pages/user'
 se iniciam com 'require_once' para importar os arquivos 'config.php' que armazena nossa conexão com o banco de dados, '/src/actions/user.php' que armazena as funções básicas para nosso CRUD, 'header.php'(cabecaçho de nossas páginas), e terminam com 'footer.php' (Rodapé das nossas páginas).
 
 #### /pages/user/read.php
 
-A seguir temos o código do nosso arquivo '/src/pages/user/read.php' responsável por listar os cadastros do nosso CRUD. Nosso arquivo preenche logo no inicio a variável $users com o resultado da função 'readUserAction' que retorna nossos cadastros do banco de dados e em seguida preenche nossa tabela html através de um foreach.
+A seguir temos o código do nosso arquivo '/src/pages/user/read.php' responsável por listar os cadastros do nosso CRUD. Nosso arquivo preenche logo no inicio a variável $users com o resultado da função 'readUserAction' que retorna nossos cadastros do banco de dados e em seguida preenche nossa tabela html através de um foreach em nosso array. Em seguida utilizamos a função 'printMessage' que exibirá posteriormente se uma operação no banco obteve sucesso. Também temos a função nativa do php htmlspecialchars para evitarmos ataques xss.
 
 ```php
 <?php
 
 require_once '../../../config.php';
 require_once '../../../src/actions/user.php';
+require_once '../../../src/modules/messages.php';
 require_once '../partials/header.php';
 
 $users = readUserAction($conn);
@@ -147,7 +154,7 @@ $users = readUserAction($conn);
 
 #### /pages/user/create.php
 
-A seguir temos o código do arquivo '/src/pages/user/create.php', responsável por exibir o formulário de criação do nosso CRUD. Nosso arquivo possui um formulário html utilizado para receber os dados de um novo cadastro: name, email e phone. Perceba também que utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Também temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método httpp POST e se os imputs foram preenchidos corretamente se sim os envia para o método 'createUserAction' para salvar nosso cadastro.
+A seguir temos o código do arquivo '/src/pages/user/create.php', responsável por exibir o formulário de criação do nosso CRUD. Nosso arquivo possui um formulário html utilizado para receber os dados de um novo cadastro: name, email e phone. Perceba também que utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Também temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método httpp POST e se os imputs foram preenchidos corretamente se sim os envia para a nossa função 'createUserAction' para salvar nosso cadastro.
 
 ```php
 <?php
@@ -186,7 +193,7 @@ if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]))
 
 #### /pages/user/edit.php
 
-Agora temos o código do arquivo '/src/pages/user/edit.php', responsável por exibir o formulário de edição do nosso CRUD. Nosso arquivo possui um formulário html preenchido com os valores atuais de name, email e phone. Perceba que de maneira similar ao arquivo anterior também utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Além disso temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método httpp POST e se os imputs foram preenchidos corretamente se sim os envia para o método 'updateUserAction' para atualizar nosso cadastro, caso contrario preenche a variável $user com o retorno da função 'findUserAction' que busca o usuário pelo id vindo da nossa url, os dados são utilizados para preencher os inputs do formulário como mostrado no código.
+Agora temos o código do arquivo '/src/pages/user/edit.php', responsável por exibir o formulário de edição do nosso CRUD. Nosso arquivo possui um formulário html preenchido com os valores atuais de name, email e phone. Perceba que de maneira similar ao arquivo anterior também utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Além disso temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método httpp POST e se os imputs foram preenchidos corretamente se sim os envia para a função 'updateUserAction' para atualizar nosso cadastro, caso contrario preenche a variável $user com o retorno da função 'findUserAction' que busca o usuário pelo id vindo da nossa url, os dados são utilizados para preencher os inputs do formulário como mostrado no código. Em nosso formulário de edição também é utilizado 'htmlspecialchars' para tratar os dados vindos do banco.
 
 ```php
 <?php
@@ -209,7 +216,7 @@ $user = findUserAction($conn, $_GET['id']);
     <div class="row flex-center">
         <div class="form-div">
             <form class="form" action="../../pages/user/edit.php" method="POST">
-                <input type="hidden" name="id" value="<?=htmlspecialchars($user['id'])?>" required/>
+                <input type="hidden" name="id" value="<?=$user['id']>" required/>
                 <label>Name</label>
                 <input type="text" name="name" value="<?=htmlspecialchars($user['name'])?>" required/>
                 <label>E-mail</label>
@@ -227,7 +234,7 @@ $user = findUserAction($conn, $_GET['id']);
 
 #### /pages/user/delete.php
 
-A seguir temos o código do arquivo '/src/pages/user/delete.php', responsável por exibir o formulário de confirmação de exclusão do nosso CRUD. Nosso arquivo possui um formulário html preenchido com o id do nosso registro e um botão de confirmação. Perceba também que de maneira similar ao arquivo anterior utilizamos 'required' em nosso campo. Além disso temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método httpp POST e se o imput foi preenchido corretamente se sim o envia para a função 'deleteUserAction' para remover nosso cadastro, caso contrario preenche o campo id do formulário.
+A seguir temos o código do arquivo '/src/pages/user/delete.php', responsável por exibir o formulário de confirmação de exclusão do nosso CRUD. Nosso arquivo possui um formulário html preenchido com o id do nosso registro e um botão de confirmação. Perceba também que de maneira similar ao arquivo anterior utilizamos 'required' em nosso campo. Além disso temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método httpp POST e se o imput foi preenchido corretamente se sim o envia para a função 'deleteUserAction' para remover nosso cadastro, caso contrario preenche o campo id do formulário. Como não temos nenhum dado cadastrado pelo usuário no nosso formulário não utilizamos 'htmlspecialchars'.
 
 ```php
 <?php
@@ -301,7 +308,7 @@ function deleteUserAction($conn, $id) {
 
 ### /src/database
 
-A seguir temos nosso arquivo '/src/database/db.php' responsável por executar nossas querys no banco de dados. Com exceção da nossa função 'readUserDb' que não utiliza nenhum dado vindo de formulário todas as nossas funções, para prevenção de SQL injection se iniciam utilizando 'mysqli_real_escape_string' para escapar nossos dados recebidos como parametro. Em seguida a query é definida em uma string. Na função 'readUserDb' executamos diretamente nossa query com a função 'mysqli_query' e retornamos nosso array. Em todos os outros métodos montamos a query por partes atrvés de prepared statements. Em todos os métodos encerramos nossa conexão com 'mysqli_close'.
+A seguir temos nosso arquivo '/src/database/db.php' responsável por executar nossas querys no banco de dados. Com exceção da nossa função 'readUserDb' que não utiliza nenhum dado vindo de formulário todas as nossas funções, para prevenção de SQL injection se iniciam utilizando 'mysqli_real_escape_string' para escapar nossos dados recebidos como parametro. Em seguida a query é definida em uma string. Na função 'readUserDb' executamos diretamente nossa query com a função 'mysqli_query' e retornamos nosso array. Em todos os outros métodos também para tratarmos SQL injection montamos a query por partes atrvés de prepared statements. Em todos os métodos encerramos nossa conexão com 'mysqli_close'.
 
 ```php
 <?php
