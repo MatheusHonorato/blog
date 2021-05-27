@@ -20,7 +20,7 @@ Para que você se situe em relação ao conteúdo do artigo colocamos algumas ob
 
 # Apresentação da aplicação
 
-Antes de começarmos a desenvolver você pode conferir como a nossa aplicação ficará através dos prints abaixo ou clicando no [link](). O nosso crud será um cadastro de usuários com os campos id, name, email e phone.
+Antes de começarmos a desenvolver você pode conferir como a nossa aplicação ficará através dos prints abaixo. O nosso crud será um cadastro de usuários com os campos id, name, email e phone.
 
 Link do projeto: https://github.com/MatheusHonorato/crud-php-mysql-procedural
 
