@@ -36,7 +36,7 @@ Link do projeto: https://github.com/MatheusHonorato/crud-php-mysql-procedural
 
 ## Mão na massa
 
-Para que você rode o seu CRUD e importe o sql do nosso banco de dados utilizaremos a ferramenta xampp que já um inclui os softwares apache, php, mysql/mariadb e phpmyadmin.
+Para que você rode o seu CRUD e importe o sql do nosso banco de dados utilizaremos a ferramenta xampp que já inclui os softwares apache, php, mysql/mariadb e phpmyadmin.
 
 Você pode efetuar o download no seguinte [link](https://www.apachefriends.org/pt_br/index.html).
 
