@@ -4,6 +4,7 @@ import SectionContainer from '@/components/SectionContainer'
 import { BlogSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+import Disqus from 'disqus-react'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 
@@ -11,6 +12,13 @@ const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day:
 
 export default function PostLayout({ children, frontMatter, next, prev }) {
   const { slug, fileName, date, title, tags } = frontMatter
+
+  const disqusShortname = 'devcontratado-com'
+  const disqusConfig = {
+    url: `${siteMetadata.siteUrl}/blog/${frontMatter.slug}`,
+    identifier: slug,
+    title: title,
+  }
 
   return (
     <SectionContainer>
@@ -52,8 +60,9 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 </ul>
               </dd>
             </dl>
-            <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
+            <div className="divide-y xl:pb-0 xl:col-span-3 xl:row-span-2">
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
+              <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
             </div>
             <footer>
               <div className="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
