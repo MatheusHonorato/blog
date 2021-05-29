@@ -19,7 +19,7 @@ export default function Home({ posts }) {
     <>
       <PageSeo title="Inicio" description={siteMetadata.description} url={siteMetadata.siteUrl} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5"></div>
+        <div className="pb-8 space-y-2 md:space-y-5"></div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
