@@ -1,5 +1,5 @@
 ---
-title: CRUD com PHP e MYSQL I
+title: CRUD com PHP e MYSQL
 date: '2021-05-17'
 tags: ['php', 'mysql', 'crud']
 draft: false
