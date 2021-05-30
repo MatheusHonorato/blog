@@ -164,7 +164,7 @@ $users = readUserAction($conn);
 
 #### /pages/user/create.php
 
-A seguir temos o código do arquivo '/src/pages/user/create.php', responsável por exibir o formulário de criação do nosso CRUD. Nosso arquivo possui um formulário html utilizado para receber os dados de um novo cadastro: name, email e phone. Perceba também que utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Também temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método httpp POST e se os imputs foram preenchidos corretamente se sim os envia para a nossa função 'createUserAction' para salvar nosso cadastro.
+A seguir temos o código do arquivo '/src/pages/user/create.php', responsável por exibir o formulário de criação do nosso CRUD. Nosso arquivo possui um formulário html utilizado para receber os dados de um novo cadastro: name, email e phone. Perceba também que utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Também temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método http POST e se os inputs foram preenchidos corretamente se sim os envia para a nossa função 'createUserAction' para salvar nosso cadastro.
 
 ```php
 <?php
@@ -203,7 +203,7 @@ if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]))
 
 #### /pages/user/edit.php
 
-Agora temos o código do arquivo '/src/pages/user/edit.php', responsável por exibir o formulário de edição do nosso CRUD. Nosso arquivo possui um formulário html preenchido com os valores atuais de name, email e phone. Perceba que de maneira similar ao arquivo anterior também utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Além disso temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método httpp POST e se os imputs foram preenchidos corretamente se sim os envia para a função 'updateUserAction' para atualizar nosso cadastro, caso contrario preenche a variável $user com o retorno da função 'findUserAction' que busca o usuário pelo id vindo da nossa url, os dados são utilizados para preencher os inputs do formulário como mostrado no código. Em nosso formulário de edição também é utilizado 'htmlspecialchars' para tratar os dados vindos do banco.
+Agora temos o código do arquivo '/src/pages/user/edit.php', responsável por exibir o formulário de edição do nosso CRUD. Nosso arquivo possui um formulário html preenchido com os valores atuais de name, email e phone. Perceba que de maneira similar ao arquivo anterior também utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Além disso temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método http POST e se os inputs foram preenchidos corretamente se sim os envia para a função 'updateUserAction' para atualizar nosso cadastro, caso contrario preenche a variável $user com o retorno da função 'findUserAction' que busca o usuário pelo id vindo da nossa url, os dados são utilizados para preencher os inputs do formulário como mostrado no código. Em nosso formulário de edição também é utilizado 'htmlspecialchars' para tratar os dados vindos do banco.
 
 ```php
 <?php
@@ -244,7 +244,7 @@ $user = findUserAction($conn, $_GET['id']);
 
 #### /pages/user/delete.php
 
-A seguir temos o código do arquivo '/src/pages/user/delete.php', responsável por exibir o formulário de confirmação de exclusão do nosso CRUD. Nosso arquivo possui um formulário html preenchido com o id do nosso registro e um botão de confirmação. Perceba também que de maneira similar ao arquivo anterior utilizamos 'required' em nosso campo. Além disso temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método httpp POST e se o imput foi preenchido corretamente se sim o envia para a função 'deleteUserAction' para remover nosso cadastro, caso contrario preenche o campo id do formulário. Como não temos nenhum dado cadastrado pelo usuário no nosso formulário não utilizamos 'htmlspecialchars'.
+A seguir temos o código do arquivo '/src/pages/user/delete.php', responsável por exibir o formulário de confirmação de exclusão do nosso CRUD. Nosso arquivo possui um formulário html preenchido com o id do nosso registro e um botão de confirmação. Perceba também que de maneira similar ao arquivo anterior utilizamos 'required' em nosso campo. Além disso temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método http POST e se o input foi preenchido corretamente se sim o envia para a função 'deleteUserAction' para remover nosso cadastro, caso contrario preenche o campo id do formulário. Como não temos nenhum dado cadastrado pelo usuário no nosso formulário não utilizamos 'htmlspecialchars'.
 
 ```php
 <?php
@@ -410,7 +410,7 @@ function deleteUserDb($conn, $id) {
 
 ### /src/modules
 
-Além dos diretórios citados também temos em '/src' a pasta '/src/modules' responsável por armazenar nosso arquivo '/src/modules/messages.php' com a 'printMessage' que retorna nossas mensagens de validação impressas no arquivo '/src/pages/read.php' após alguma alteração foita no banco de dados através de inserção, edição ou remoção.
+Além dos diretórios citados também temos em '/src' a pasta '/src/modules' responsável por armazenar nosso arquivo '/src/modules/messages.php' com a 'printMessage' que retorna nossas mensagens de validação impressas no arquivo '/src/pages/read.php' após alguma alteração feita no banco de dados através de inserção, edição ou remoção.
 
 ```php
 <?php
