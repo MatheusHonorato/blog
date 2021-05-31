@@ -65,6 +65,19 @@ class MyDocument extends Document {
             name="google-site-verification"
             content="8dHMZxup35moYXc7M8xYaL9v-dIuQbHrZtO9PWUL3lo"
           />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5BT6HT4BG"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-C5BT6HT4BG', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
           <Main />
