@@ -44,6 +44,8 @@ O processo de instalação no windows é o velho next next que estamos acostumad
 
 ## SQL
 
+A seguir você pode conferir o SQL do nosso banco.
+
 ```sql
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -160,6 +162,7 @@ $users = readUserAction($conn);
 	</table>
 </div>
 <?php require_once '../partials/footer.php'; ?>
+
 ```
 
 #### /pages/user/create.php
@@ -173,7 +176,7 @@ require_once '../../../config.php';
 require_once '../../actions/user.php';
 require_once '../partials/header.php';
 
-if(isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]))
+if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]))
     createUserAction($conn, $_POST["name"], $_POST["email"], $_POST["phone"]);
 
 ?>
@@ -212,7 +215,7 @@ require_once '../../../config.php';
 require_once '../../actions/user.php';
 require_once '../partials/header.php';
 
-if(isset($_POST["id"], $_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]))
+if (isset($_POST["id"], $_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]))
     updateUserAction($conn, $_POST["id"], $_POST["name"], $_POST["email"], $_POST["phone"]);
 
 $user = findUserAction($conn, $_GET['id']);
@@ -226,7 +229,7 @@ $user = findUserAction($conn, $_GET['id']);
     <div class="row flex-center">
         <div class="form-div">
             <form class="form" action="../../pages/user/edit.php" method="POST">
-                <input type="hidden" name="id" value="<?=$user['id']>" required/>
+                <input type="hidden" name="id" value="<?=$user['id']?>" required/>
                 <label>Name</label>
                 <input type="text" name="name" value="<?=htmlspecialchars($user['name'])?>" required/>
                 <label>E-mail</label>
@@ -240,6 +243,7 @@ $user = findUserAction($conn, $_GET['id']);
     </div>
 </div>
 <?php require_once '../partials/footer.php'; ?>
+
 ```
 
 #### /pages/user/delete.php
@@ -274,6 +278,7 @@ if(isset($_POST['id']))
     </div>
 </div>
 <?php require_once '../partials/footer.php'; ?>
+
 ```
 
 ### /src/actions
@@ -314,6 +319,7 @@ function deleteUserAction($conn, $id) {
 	$message = $deleteUserDb == 1 ? 'success-remove' : 'error-remove';
 	return header("Location: ./read.php?message=$message");
 }
+
 ```
 
 ### /src/database
@@ -406,6 +412,7 @@ function deleteUserDb($conn, $id) {
 		return true;
 	}
 }
+
 ```
 
 ### /src/modules
@@ -416,23 +423,23 @@ Além dos diretórios citados também temos em '/src' a pasta '/src/modules' res
 <?php
 
 function printMessage($message) {
-    if($message=='success-create')
+    if ($message=='success-create')
         return '<span class="text-success">Registration successfully Complete!</span>';
-    if($message=='error-create')
+    if ($message=='error-create')
         return '<span class="text-error">Error when registering.</span>';
 
-    if($message=='success-remove')
+    if ($message=='success-remove')
         return '<span class="text-success">Registration removed successfully!</span>';
-    if($message=='error-remove')
+    if ($message=='error-remove')
         return '<span class="text-error">Error removing registration.</span>';
 
-    if($message=='success-update')
+    if ($message=='success-update')
         return '<span class="text-success">Registration updated successfully!</span>';
-    if($message=='error-update')
+    if ($message=='error-update')
         return '<span class="text-error">Error updating registration.</span>';
 }
 
 ```
 
 Para a proposta do artigo.. é isso :)
-E aí? O que achou? Tem alguma sugestão? Comenta aí
+E aí? O que achou? Tem alguma sugestão? Comenta aí.
