@@ -287,7 +287,7 @@ Em nosso diretório actions temos o arquivo '/src/actions/user.php' com as funç
 
 Em seguida temos a função 'readUserAction' que busca nossos cadastros através da função 'readUserDb' e é utilizada na '/src/pages/user/read.php'
 
-Agora temos as funções responsáveis por criar(createUserAction), atualizar(updateUserAction) e remover(deleteUserAction) nossos cadastros, cada uma recebe seus respectivos parametros (conexão e atributos do cadatastro) e os repassa para as funções do nosso arquivo '/src/databse/db.php' de acordo com o resultado redirecionamos o usuário para a page 'src/pages/user/read.php' passando como parametro a variável GET message que guarda nossa mensagem de sucesso ou erro.
+Agora temos as funções responsáveis por criar(createUserAction), atualizar(updateUserAction) e remover(deleteUserAction) nossos cadastros, cada uma recebe seus respectivos parametros (conexão e atributos do cadastro) e os repassa para as funções do nosso arquivo '/src/databse/db.php' de acordo com o resultado redirecionamos o usuário para a page 'src/pages/user/read.php' passando como parametro a variável GET message que guarda nossa mensagem de sucesso ou erro.
 
 ```php
 <?php
@@ -324,7 +324,7 @@ function deleteUserAction($conn, $id) {
 
 ### /src/database
 
-A seguir temos nosso arquivo '/src/database/db.php' responsável por executar nossas querys no banco de dados. Com exceção da nossa função 'readUserDb' que não utiliza nenhum dado vindo de formulário todas as nossas funções, para prevenção de SQL injection se iniciam utilizando 'mysqli_real_escape_string' para escapar nossos dados recebidos como parametro. Em seguida a query é definida em uma string. Na função 'readUserDb' executamos diretamente nossa query com a função 'mysqli_query' e retornamos nosso array. Em todos os outros métodos também para tratarmos SQL injection montamos a query por partes atrvés de prepared statements. Em todos os métodos encerramos nossa conexão com 'mysqli_close'.
+A seguir temos nosso arquivo '/src/database/db.php' responsável por executar nossas querys no banco de dados. Com exceção da nossa função 'readUserDb' que não utiliza nenhum dado vindo de formulário todas as nossas funções, para prevenção de SQL injection se iniciam utilizando 'mysqli_real_escape_string' para escapar nossos dados recebidos como parametro. Em seguida a query é definida em uma string. Na função 'readUserDb' executamos diretamente nossa query com a função 'mysqli_query' e retornamos nosso array. Em todos os outros métodos também para tratarmos SQL injection montamos a query por partes através de prepared statements. Em todos os métodos encerramos nossa conexão com 'mysqli_close'.
 
 ```php
 <?php
