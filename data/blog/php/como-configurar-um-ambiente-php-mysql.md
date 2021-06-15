@@ -9,7 +9,7 @@ image: '/static/images/php-mysql.jpg'
 
 Fala, pessoal! Nesse artigo iremos ensinar você a configurar um ambiente de desenvolvimento PHP no Windows de maneira correta e simples contendo a linguagem PHP, o banco de dados MySQL e o gerenciador de banco de dados Workbench. Como servidor utilizaremos o próprio servidor do PHP disponível desde a vesão 5.4.
 
-Você deve estar se perguntando o porquê de não estarmos abordando uma solução como Xampp ou Wamp. Para esclarecer essa dúvida estarei indicando o artigo do Vinicius Dias. [Por que não usar XAMPP](https://dias.dev/2021-04-10-por-que-nao-usar-xampp)
+Você deve estar se perguntando o porquê de não estarmos abordando uma solução como Xampp ou Wamp. Para esclarecer essa dúvida estarei indicando o artigo do Vinicius Dias do blog Dias de Dev. [Por que não usar XAMPP](https://dias.dev/2021-04-10-por-que-nao-usar-xampp)
 
 # PHP
 
