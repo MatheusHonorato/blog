@@ -7,7 +7,7 @@ summary: 'Nesse artigo você aprenderá como configurar um ambiente de desenvolv
 image: '/static/images/php-mysql.jpg'
 ---
 
-Fala, pessoal! Nesse artigo iremos ensinar você a configurar um ambiente de desenvolvimento PHP no Windows de maneira correta e simples contendo a linguagem PHP, o banco de dados MySQL e o gerenciador de banco de dados Workbench. Como servidor utilizaremos o próprio servidor do PHP disponível desde a vesão 5.4.
+Fala, pessoal! Nesse artigo iremos ensinar você a configurar um ambiente de desenvolvimento PHP no Windows de maneira correta e simples contendo a linguagem PHP, o banco de dados MySQL e o gerenciador de banco de dados Workbench. Como servidor utilizaremos o próprio servidor do PHP disponível desde a versão 5.4.
 
 Você deve estar se perguntando o porquê de não estarmos abordando uma solução como Xampp ou Wamp. Para esclarecer essa dúvida estarei indicando o artigo do Vinicius Dias do blog Dias de Dev. [Por que não usar XAMPP](https://dias.dev/2021-04-10-por-que-nao-usar-xampp)
 
@@ -19,30 +19,30 @@ Para configurarmos o PHP no Windows precisamos efetuar o download do instalador 
 
 ![PHP Windows Download](/static/images/php-windows-download.jpg)
 
-Ao carregar a pagina de download baixe a versão 'Thread Safe' em zip de acordo com a arquitetura do seu computador x86 ou x64 (Você pode verificar essa informação buscando por 'Sobre' na pesquisa do windows).
+Ao carregar a página de download baixe a versão 'Thread Safe' em zip de acordo com a arquitetura do seu computador x86 ou x64 (Você pode verificar essa informação buscando por 'Sobre' na pesquisa do windows).
 
 ![PHP Windows Download Thread Safe](/static/images/php-windows-download-thread-safe.jpg)
 
 ## Instalação
 
-Após efetuar o download do arquivo zip descompacte no diretório 'C:' e renomei a pasta para 'php', se ainda não possui o Microsoft Visual C++ efetue o download da versão mais recente no site da Microsoft e execute a instalação.
+Após efetuar o download do arquivo zip descompacte no diretório 'C:' e renomeie a pasta para 'php', se ainda não possui o Microsoft Visual C++ efetue o download da versão mais recente no site da Microsoft e execute a instalação.
 
 Para que nosso PHP funcione corretamente precisamos ativar suas configurações padrão. Mas e como fazemos isso?
-Simples! basta renomearmos o arquivo 'php.ini-development' para 'php.ini' dentro do nosso diretório 'php'. Assim que executarmos o PHP esse arquivo será iniciado carregando nossas configurações.
+Simples! Basta renomearmos o arquivo 'php.ini-development' para 'php.ini' dentro do nosso diretório 'php'. Assim que executarmos o PHP esse arquivo será iniciado carregando nossas configurações.
 
 ## Variáveis de ambiente
 
-Ok agora temos nossa instalação disponível em nossa máquina, mas existe um problema só podemos executa-la no diretório 'C:/php' onde está nossa instalação. Então agora iremos configuar suas variáveis de ambiente para que possamos roda-lo a partir de diretórios diferentes.
+Ok agora temos nossa instalação disponível em nossa máquina, mas existe um problema só podemos executa-la no diretório 'C:/php' onde está nossa instalação. Então agora iremos configurar suas variáveis de ambiente para que possamos roda-lo a partir de diretórios diferentes.
 
 Para configurarmos nossa variável de ambiente busque 'Variáveis de ambiente' na pesquisa do Windows, selecione 'Editar as variáveis de ambiente do sistema' e clique em 'Variáveis de Ambiente'.
 
 ![PHP Windows Download](/static/images/variaveis-de-ambiente.jpg)
 
-Na sessão 'Variáveis de Ambiente' selecione 'Path' e clique em 'Editar', selecione a primeira linha vazia e adicione 'C:/php', clique em 'OK' e depois em 'OK' novamente em 'Propriedades do Sistema'. Pronto agora concluimos nossa configuração do PHP no Windows. Para testar basta reiniciar sua máquina, abrir o CMD e executar o PHP.
+Na seção 'Variáveis de Ambiente' selecione 'Path' e clique em 'Editar', selecione a primeira linha vazia e adicione 'C:/php', clique em 'OK' e depois em 'OK' novamente em 'Propriedades do Sistema'. Pronto agora concluímos nossa configuração do PHP no Windows. Para testar basta reiniciar sua máquina, abrir o CMD e executar o PHP.
 
 ## Como rodar o servidor
 
-Crie um diretorio com o nome 'teste' contendo um arquivo 'index.php' e adicione o código abaixo.
+Crie um diretório com o nome 'teste' contendo um arquivo 'index.php' e adicione o código abaixo.
 
 ```php
 <?php
