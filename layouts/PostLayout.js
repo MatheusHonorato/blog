@@ -29,7 +29,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                  <dt className="sr-only">Published on</dt>
+                  <dt className="sr-only">Publicado em</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
@@ -53,7 +53,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   <li className="flex items-center space-x-2">
                     <img src={siteMetadata.image} alt="avatar" className="w-10 h-10 rounded-full" />
                     <dl className="text-sm font-medium leading-5 whitespace-nowrap">
-                      <dt className="sr-only">Name</dt>
+                      <dt className="sr-only">Nome</dt>
                       <dd className="text-gray-900 dark:text-gray-100">{siteMetadata.author}</dd>
                     </dl>
                   </li>
@@ -83,7 +83,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     {prev && (
                       <div>
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Previous Article
+                          Artigo anterior
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
                           <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
@@ -93,7 +93,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     {next && (
                       <div>
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Next Article
+                          Próximo artigo
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
                           <Link href={`/blog/${next.slug}`}>{next.title}</Link>
