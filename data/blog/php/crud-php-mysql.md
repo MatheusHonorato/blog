@@ -36,11 +36,8 @@ Link do projeto: https://github.com/MatheusHonorato/crud-php-mysql-procedural
 
 ## Mão na massa
 
-Para que você rode o seu CRUD e importe o sql do nosso banco de dados utilizaremos a ferramenta xampp que já inclui os softwares apache, php, mysql/mariadb e phpmyadmin.
-
-Você pode efetuar o download no seguinte [link](https://www.apachefriends.org/pt_br/index.html).
-
-O processo de instalação no windows é o velho next next que estamos acostumados e para usuários de linux basta utilizar seu gerenciador de pacotes.
+Para que você rode o CRUD e importe o sql do nosso banco de dados é necessário ter o seu ambiente de desenvolvimento configurado com o PHP e o MySQL. Você pode conferir como configurar no nosso artigo: [Ambiente de desenvolvimento com PHP e MySQL no Windows
+](/blog/php/como-configurar-um-ambiente-php-mysql).
 
 ## SQL
 
