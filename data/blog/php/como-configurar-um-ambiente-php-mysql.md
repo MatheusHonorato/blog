@@ -9,7 +9,7 @@ image: '/static/images/php-mysql.jpg'
 
 Fala, pessoal! Nesse artigo iremos ensinar você a configurar um ambiente de desenvolvimento PHP no Windows de maneira correta e simples contendo a linguagem PHP, o banco de dados MySQL e o gerenciador de banco de dados Workbench. Como servidor utilizaremos o próprio servidor do PHP disponível desde a versão 5.4.
 
-Você deve estar se perguntando o porquê de não estarmos abordando uma solução como Xampp ou Wamp. Para esclarecer essa dúvida estarei indicando o artigo do Vinicius Dias do blog Dias de Dev. [Por que não usar XAMPP](https://dias.dev/2021-04-10-por-que-nao-usar-xampp)
+Você deve estar se perguntando o porquê de não estarmos abordando uma solução como Xampp ou Wamp. Para esclarecer essa dúvida estarei indicando o artigo do Vinicius Dias do blog Dias de Dev [Por que não usar XAMPP](https://dias.dev/2021-04-10-por-que-nao-usar-xampp)
 
 # PHP
 
@@ -40,9 +40,9 @@ Para configurarmos nossa variável de ambiente busque 'Variáveis de ambiente' n
 
 Na seção 'Variáveis de Ambiente' selecione 'Path' e clique em 'Editar', selecione a primeira linha vazia e adicione 'C:/php', clique em 'OK' e depois em 'OK' novamente em 'Propriedades do Sistema'. Pronto agora concluímos nossa configuração do PHP no Windows. Para testar basta reiniciar sua máquina, abrir o CMD e executar o PHP.
 
-## Como rodar o servidor
+## Como rodar/testar o servidor
 
-Crie um diretório com o nome 'teste' contendo um arquivo 'index.php' e adicione o código abaixo.
+Como acabamos de configurar nossas variáveis de ambiente agora podemos rodar o PHP de qualquer diretório. Para testar o servidor do PHP você pode criar uma pasta com o nome 'teste' contendo um arquivo 'index.php' e adicionar o código abaixo.
 
 ```php
 <?php
@@ -50,11 +50,13 @@ Crie um diretório com o nome 'teste' contendo um arquivo 'index.php' e adicione
 phpinfo();
 ```
 
-Abra o CMD, acesse o diretório criado e digite o comando abaixo:
+Para executar o servidor abra o CMD, acesse a pasta criada e digite o comando abaixo:
 
 ```php
 php -S localhost:8000
 ```
+
+Para encerrar o servidor basta digitar 'Ctrl'+'C'.
 
 # MySQL
 
