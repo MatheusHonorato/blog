@@ -3,20 +3,20 @@ title: CRUD com PHP e MYSQL
 date: '2021-05-29'
 tags: ['php', 'mysql', 'crud']
 draft: false
-summary: 'Nesse artigo você aprenderá como desenvolver um CRUD com PHP e MYSQL'
+summary: 'Neste artigo você aprenderá como desenvolver um CRUD com PHP e MYSQL'
 image: '/static/images/crud-php.jpg'
 ---
 
-Fala, galera! Nesse artigo vamos aprender como desenvolver uma aplicação CRUD básica com a biblioteca Mysql I, lib utilizada para se comunicar de maneira nativa com o banco de dados Mysql/MariaDB no PHP.
-Mas afinal o que é um CRUD? Um CRUD é basicamente uma aplicação que efetua as quatro operações básicas de persistencia de dados, CREATE(criar), READ(ler), UPDATE(atualizar) e DELETE(remover).
+Fala, galera! Neste artigo vamos aprender como desenvolver uma aplicação CRUD básica com a biblioteca Mysql I, lib utilizada para se comunicar de maneira nativa com o banco de dados Mysql/MariaDB no PHP.
+Mas, afinal o que é um CRUD? Um CRUD é basicamente uma aplicação que efetua as quatro operações básicas de persistencia de dados: CREATE(criar), READ(ler), UPDATE(atualizar) e DELETE(remover).
 
-E por que é tão importante aprender a desenvolver um CRUD? basicamente qualquer sistema que manipule dados implementará funções de um CRUD, sendo assim essencial para você que está iniciando no mundo do desenvolvimento de software.
+E por que é tão importante aprender a desenvolver um CRUD? Basicamente qualquer sistema que manipule dados implementará funções de um CRUD, sendo assim essencial para você que está iniciando no mundo do desenvolvimento de software.
 
 Para que você se situe em relação ao conteúdo do artigo colocamos algumas observações a seguir:
 
-- Nível: Básico
-- Pré requisitos: PHP básico e banco de dados relacional
-- Conteúdo: PHP procedural e banco de dados
+- Nível: Básico;
+- Pré requisitos: PHP básico e banco de dados relacional;
+- Conteúdo: PHP procedural e banco de dados.
 
 # Apresentação da aplicação
 
@@ -41,7 +41,7 @@ Para que você rode o CRUD e importe o sql do nosso banco de dados é necessári
 
 ## SQL
 
-A seguir você pode conferir o SQL do nosso banco.
+A seguir você pode conferir o SQL do nosso banco:
 
 ```sql
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -65,7 +65,8 @@ COMMIT;
 
 ## Organizando nossa aplicação
 
-Em relação à organização da nossa aplicação temos na raiz do nosso projeto o arquivo 'config.php', que armazena nossas configurações de banco de dados como usuário, senha, nome da base de dados e nossa instância do Mysql I. Também temos o arquivo 'index.php' que inicializa nossa aplicação e a pasta '/src' com a lógica do nosso CRUD. Além do diretório '/src' na nossa raiz também temos o '/css' com o estilo da nossa aplicação. (Como não é o foco deste artigo não abordaremos o css).
+Em relação à organização da nossa aplicação temos na raiz do nosso projeto o arquivo 'config.php', que armazena nossas configurações de banco de dados como usuário, senha, nome da base de dados e nossa instância do Mysql I. Também temos o arquivo 'index.php' que inicializa nossa aplicação e a pasta '/src' com a lógica do nosso CRUD. Além do diretório '/src' na nossa raiz também temos o '/css' com o estilo da nossa aplicação.
+(Como não é o foco deste artigo não abordaremos o CSS).
 
 ![CRUD PHP](/static/images/project.jpg)
 
@@ -73,7 +74,7 @@ Em relação à organização da nossa aplicação temos na raiz do nosso projet
 
 A seguir você pode visualizar o código do arquivo 'config.php' onde temos as variáveis $db_name que armazena o nome da nossa base de dados, $db_host guardando o nome do nosso host, $db_user que armazena o nome do nosso usuário de banco de dados e $db_pass armazenando a senha do nosso banco de dados. Todas essas variáveis são passadas para a nossa lib Mysql I, responsável por gerar nossa conexão com o banco de dados.
 
-Obs: No arquivo 'config.php' também criamos a variável $host, responsável por armazenar o endereço da nossa aplicação gerando menos problemas com as funções 'require_once' vistas posteriormente ao mudar nosso app de diretório ou domínio.
+Obs.: No arquivo 'config.php' também criamos a variável $host, responsável por armazenar o endereço da nossa aplicação gerando menos problemas com as funções 'require_once' vistas posteriormente ao mudar nosso app de diretório ou domínio.
 
 ```php
 <?php
@@ -100,22 +101,21 @@ try {
 
 Dentro do diretório '/src' temos a pasta '/pages' que contém arquivos responsáveis por gerar nosso html, '/database' com funções que trabalham com nossas querys de banco de dados e '/actions' que é responsável por fazer o meio de campo entre '/database' e '/pages'.
 
-Mas então você se pergunta o porque de não colocarmos sqls, html e consultas ao banco nos mesmos arquivos de forma misturada. Simplesmente porque estariamos dificultando a manutenção da nosssa aplicação deixando nosso app com um código mais poluido e redundante.
+Então você se pergunta o porque de não colocarmos sqls, html e consultas ao banco nos mesmos arquivos de forma misturada. Simplesmente porque estaríamos dificultando a manutenção da nosssa aplicação deixando nosso app com um código mais poluído e redundante.
 
-Com uma arquitetura ou organização de pastas que divide nosso app em responsabilidades menores que dizem claramente o que fazem facilitamos a manutenção e compreensão de como nosso app funciona, por que tudo fica mais desacoplado.
+Com uma arquitetura ou organização de pastas que divide nosso app em responsabilidades menores que dizem claramente o que fazem, facilitamos a manutenção e compreensão de como nosso app funciona, porque tudo fica mais desacoplado.
 
-Ex: Se mudarmos nosso banco de dados basta modificarmos o arquivo 'config.php' que mantém a nossa conexão e talvez o arquivo '/src/database/user.php' que contém as funções php com nossos códigos sql.
+Ex.: Se mudarmos nosso banco de dados basta modificarmos o arquivo 'config.php' que mantém a nossa conexão e talvez o arquivo '/src/database/user.php' que contém as funções php com nossos códigos sql.
 
 ![CRUD PHP SRC](/static/images/src.JPG)
 
 ### /src/pages
 
-Nossos arquivos de pages estão organizados em duas pastas '/user' responsável por armazenar os códigos de nossas páginas e '/partials' responsável por armazenar o código de header e footer que é comum a todas elas. Todos os nossos arquivos em '/src/pages/user'
-se iniciam com 'require_once' para importar os arquivos 'config.php' que armazena nossa conexão com o banco de dados, '/src/actions/user.php' que armazena as funções básicas para nosso CRUD, 'header.php'(cabecaçho de nossas páginas), e terminam com 'footer.php' (Rodapé das nossas páginas).
+Nossos arquivos de pages estão organizados em duas pastas: '/user' responsável por armazenar os códigos de nossas páginas e '/partials' responsável por armazenar o código de header e footer que é comum a todas elas. Todos os nossos arquivos em '/src/pages/user' se iniciam com 'require_once' para importar os arquivos 'config.php' que armazena nossa conexão com o banco de dados, '/src/actions/user.php' que armazena as funções básicas para nosso CRUD, 'header.php'(cabecaçho de nossas páginas), e terminam com 'footer.php' (Rodapé das nossas páginas).
 
 #### /pages/user/read.php
 
-A seguir temos o código do nosso arquivo '/src/pages/user/read.php' responsável por listar os cadastros do nosso CRUD. Nosso arquivo preenche logo no inicio a variável $users com o resultado da função 'readUserAction' que retorna nossos cadastros do banco de dados e em seguida preenche nossa tabela html através de um foreach em nosso array. Em seguida utilizamos a função 'printMessage' que exibirá posteriormente se uma operação no banco obteve sucesso. Também temos a função nativa do php htmlspecialchars para evitarmos ataques xss.
+A seguir temos o código do nosso arquivo '/src/pages/user/read.php' responsável por listar os cadastros do nosso CRUD. Nosso arquivo preenche logo no início a variável $users com o resultado da função 'readUserAction' que retorna nossos cadastros do banco de dados e em seguida preenche nossa tabela html através de um foreach em nosso array. Em seguida, utilizamos a função 'printMessage' que exibirá posteriormente se uma operação no banco obteve sucesso. Também temos a função nativa do php 'htmlspecialchars' para evitarmos ataques xss.
 
 ```php
 <?php
@@ -164,7 +164,7 @@ $users = readUserAction($conn);
 
 #### /pages/user/create.php
 
-A seguir temos o código do arquivo '/src/pages/user/create.php', responsável por exibir o formulário de criação do nosso CRUD. Nosso arquivo possui um formulário html utilizado para receber os dados de um novo cadastro: name, email e phone. Perceba também que utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Também temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método http POST e se os inputs foram preenchidos corretamente se sim os envia para a nossa função 'createUserAction' para salvar nosso cadastro.
+A seguir temos o código do arquivo '/src/pages/user/create.php', responsável por exibir o formulário de criação do nosso CRUD. Nosso arquivo possui um formulário html utilizado para receber os dados de um novo cadastro: name, email e phone. Perceba também que utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Também temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método http POST e se os inputs foram preenchidos corretamente. Se sim, os envia para a nossa função 'createUserAction' para salvar nosso cadastro.
 
 ```php
 <?php
@@ -203,7 +203,7 @@ if (isset($_POST["name"]) && isset($_POST["email"]) && isset($_POST["phone"]))
 
 #### /pages/user/edit.php
 
-Agora temos o código do arquivo '/src/pages/user/edit.php', responsável por exibir o formulário de edição do nosso CRUD. Nosso arquivo possui um formulário html preenchido com os valores atuais de name, email e phone. Perceba que de maneira similar ao arquivo anterior também utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Além disso temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método http POST e se os inputs foram preenchidos corretamente se sim os envia para a função 'updateUserAction' para atualizar nosso cadastro, caso contrario preenche a variável $user com o retorno da função 'findUserAction' que busca o usuário pelo id vindo da nossa url, os dados são utilizados para preencher os inputs do formulário como mostrado no código. Em nosso formulário de edição também é utilizado 'htmlspecialchars' para tratar os dados vindos do banco.
+Agora temos o código do arquivo '/src/pages/user/edit.php', responsável por exibir o formulário de edição do nosso CRUD. Nosso arquivo possui um formulário html preenchido com os valores atuais de name, email e phone. Perceba que de maneira similar ao arquivo anterior também utilizamos 'required' em nossos campos para que o formulário não seja submetido sem que sejam preenchidos. Além disso, temos no início do nosso arquivo uma condição if que verifica se o formulário foi submetido via método http POST e se os inputs foram preenchidos corretamente. Se sim, os envia para a função 'updateUserAction' para atualizar nosso cadastro. Caso contrário, preenche a variável $user com o retorno da função 'findUserAction' que busca o usuário pelo id vindo da nossa url, os dados são utilizados para preencher os inputs do formulário como mostrado no código. Em nosso formulário de edição também é utilizado 'htmlspecialchars' para tratar os dados vindos do banco.
 
 ```php
 <?php
@@ -245,7 +245,7 @@ $user = findUserAction($conn, $_GET['id']);
 
 #### /pages/user/delete.php
 
-A seguir temos o código do arquivo '/src/pages/user/delete.php', responsável por exibir o formulário de confirmação de exclusão do nosso CRUD. Nosso arquivo possui um formulário html preenchido com o id do nosso registro e um botão de confirmação. Perceba também que de maneira similar ao arquivo anterior utilizamos 'required' em nosso campo. Além disso temos no inicio do nosso arquivo uma condição if que verifica se o formulário foi submetido via método http POST e se o input foi preenchido corretamente se sim o envia para a função 'deleteUserAction' para remover nosso cadastro, caso contrario preenche o campo id do formulário. Como não temos nenhum dado cadastrado pelo usuário no nosso formulário não utilizamos 'htmlspecialchars'.
+A seguir temos o código do arquivo '/src/pages/user/delete.php', responsável por exibir o formulário de confirmação de exclusão do nosso CRUD. Nosso arquivo possui um formulário html preenchido com o id do nosso registro e um botão de confirmação. Perceba também que, de maneira similar ao arquivo anterior utilizamos 'required' em nosso campo. Além disso temos no início do nosso arquivo uma condição if que verifica se o formulário foi submetido via método http POST e se o input foi preenchido corretamente.Se sim, o envia para a função 'deleteUserAction' para remover nosso cadastro, caso contrário preenche o campo id do formulário. Como não temos nenhum dado cadastrado pelo usuário no nosso formulário não utilizamos 'htmlspecialchars'.
 
 ```php
 <?php
@@ -280,11 +280,11 @@ if(isset($_POST['id']))
 
 ### /src/actions
 
-Em nosso diretório actions temos o arquivo '/src/actions/user.php' com as funções do nosso CRUD. No inicio do arquivo importamos '/src/datadase/user.php' com nossas funções para trabalhar com banco de dados. A primeira função presente no arquivo é a 'findUserAction' responsável por buscar nosso usuário no banco de dados através da função 'findUserDb', essa função é utlizada para carregar nosso usuário na nossa '/src/pages/user/edit.php' arquivo visto anteriormente.
+Em nosso diretório actions temos o arquivo '/src/actions/user.php' com as funções do nosso CRUD. No início do arquivo importamos '/src/datadase/user.php' com nossas funções para trabalhar com banco de dados. A primeira função presente no arquivo é a 'findUserAction', responsável por buscar nosso usuário no banco de dados através da função 'findUserDb', essa função é utlizada para carregar nosso usuário na nossa '/src/pages/user/edit.php' arquivo visto anteriormente.
 
 Em seguida temos a função 'readUserAction' que busca nossos cadastros através da função 'readUserDb' e é utilizada na '/src/pages/user/read.php'
 
-Agora temos as funções responsáveis por criar(createUserAction), atualizar(updateUserAction) e remover(deleteUserAction) nossos cadastros, cada uma recebe seus respectivos parametros (conexão e atributos do cadastro) e os repassa para as funções do nosso arquivo '/src/databse/db.php' de acordo com o resultado redirecionamos o usuário para a page 'src/pages/user/read.php' passando como parametro a variável GET message que guarda nossa mensagem de sucesso ou erro.
+Agora temos as funções responsáveis por criar(createUserAction), atualizar(updateUserAction) e remover(deleteUserAction) nossos cadastros, cada uma recebe seus respectivos parâmetros (conexão e atributos do cadastro) e os repassa para as funções do nosso arquivo '/src/databse/db.php' de acordo com o resultado redirecionamos o usuário para a page 'src/pages/user/read.php' passando como parâmetro a variável GET message que guarda nossa mensagem de sucesso ou erro.
 
 ```php
 <?php
