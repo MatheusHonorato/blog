@@ -1,6 +1,6 @@
 ---
 title: CRUD com PHP e MYSQL
-date: '2021-05-17'
+date: '2021-05-29'
 tags: ['php', 'mysql', 'crud']
 draft: false
 summary: 'Nesse artigo você aprenderá como desenvolver um CRUD com PHP e MYSQL'
