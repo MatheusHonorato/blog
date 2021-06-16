@@ -1,6 +1,6 @@
 ---
 title: Ambiente de desenvolvimento com PHP e MySQL no Windows
-date: '2021-05-17'
+date: '2021-06-15'
 tags: ['php', 'mysql']
 draft: false
 summary: 'Nesse artigo você aprenderá como configurar um ambiente de desenvolvimento com PHP e MySQL no Windows'
