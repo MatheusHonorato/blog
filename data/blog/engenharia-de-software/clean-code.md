@@ -4,7 +4,7 @@ date: '2021-10-6'
 tags: ['clean code', 'código limpo', 'engenharia de software']
 draft: false
 summary: 'Neste artigo você aprenderá como melhorar a qualidade do seu código através do clean code.'
-image: '/static/images/clean-code-porta.jpeg'
+image: '/static/images/clean-code-porta.jpg'
 ---
 
 Você sabe que o principal gargalo no desenvolvimento de software está justamente na manutenção? Ou seja, um código mal escrito desde a sua primeira versão pode funcionar, mas vai gerar muitos prejuízos.
