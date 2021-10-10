@@ -107,7 +107,7 @@ Com uma arquitetura ou organização de pastas que divide nosso app em responsab
 
 Ex.: Se mudarmos nosso banco de dados basta modificarmos o arquivo 'config.php' que mantém a nossa conexão e talvez o arquivo '/src/database/user.php' que contém as funções php com nossos códigos sql.
 
-
+![CRUD PHP SRC](/static/images/src.JPG)
 
 ### /src/pages
 
