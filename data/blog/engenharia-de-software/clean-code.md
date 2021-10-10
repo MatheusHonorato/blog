@@ -3,7 +3,7 @@ title: 'Clean code: O mínimo que você precisa saber'
 date: '2021-10-6'
 tags: ['clean code', 'código limpo', 'engenharia de software']
 draft: false
-summary: 'Neste artigo você aprenderá como melhorar a qualidade do seu código através do clean code.'
+summary: 'Neste artigo você aprenderá como melhorar a qualidade do seu código utilizando clean code.'
 image: '/static/images/clean-code-porta.jpg'
 ---
 
@@ -11,7 +11,7 @@ Você sabe que o principal gargalo no desenvolvimento de software está justamen
 
 O que é custoso em um projeto de software não são os momentos iniciais e as primeiras features, mas sim a manutenção e evolução, momento em que trabalhamos com muito código já existente.
 
-Gastamos em média dez vezes mais tempo lendo código do que programando. Sendo assim é importante que se enscreva pensando em quem vai ler. Estamos nos comunicando com outros desenvolvedores através do código. Se a comunicação é ruim desperdiçamos tempo e muitas vezes até inviabilizamos o projeto. Uma boa forma de percebermos isso é analisando o gráfico a seguir.
+Gastamos em média dez vezes mais tempo lendo código do que programando. Sendo assim é importante que se enscreva pensando em quem vai ler. Estamos nos comunicando com outros desenvolvedores por meio do código. Se a comunicação é ruim desperdiçamos tempo e muitas vezes até inviabilizamos o projeto. Uma boa forma de percebermos isso é analisando o gráfico a seguir.
 
 ![Produtividade x Tempo](/static/images/clean-code-produtividadeXtempo.png)
 
@@ -254,7 +254,7 @@ function parseBetterJSAlternative(code) {
 
 * ##### Funções devem ser pequenas
 
-  De acordo com o autor funções longas e com muitos níveis de abstração dificultam a compreenção do código. Sendo assim Uncle Bob reforça através dos dois itens abaixo a importância de funções pequenas para facilitar a manutenção e compreenção. 
+  De acordo com o autor funções longas e com muitos níveis de abstração dificultam a compreenção do código. Sendo assim Uncle Bob reforça por meio dos dois itens abaixo a importância de funções pequenas para facilitar a manutenção e compreenção. 
 
   * As funções precisam ser pequenas;
   * Elas têm de ser ainda menores.
