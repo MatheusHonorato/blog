@@ -13,7 +13,7 @@ Você deve estar se perguntando o porquê de não estarmos abordando uma soluç�
 
 # PHP
 
-Observaçã: Se você tem o xampp ou qualquer outra ferramenta que inclua o mysql/mariadb, é importante que remova completamente para evitar conflitos.
+Observação: Se você tem o xampp ou qualquer outra ferramenta que inclua o mysql/mariadb, é importante que remova completamente para evitar conflitos.
 
 ## Download
 
