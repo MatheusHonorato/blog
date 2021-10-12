@@ -3,7 +3,7 @@ title: Ambiente de desenvolvimento com PHP e MySQL no Windows
 date: '2021-06-15'
 tags: ['php', 'mysql']
 draft: false
-summary: 'Neste artigo você aprenderá como configurar um ambiente de desenvolvimento com PHP e MySQL no Windows'
+summary: 'Neste artigo você aprenderá como configurar um ambiente de desenvolvimento com PHP e MySQL no Windows.'
 image: '/static/images/php-mysql.jpg'
 ---
 
@@ -12,6 +12,8 @@ Fala, pessoal! Neste artigo iremos ensinar você a configurar um ambiente de des
 Você deve estar se perguntando o porquê de não estarmos abordando uma solução como Xampp ou Wamp. Para esclarecer essa dúvida estarei indicando o artigo do Vinicius Dias do blog Dias de Dev [Por que não usar XAMPP](https://dias.dev/2021-04-10-por-que-nao-usar-xampp)
 
 # PHP
+
+Observaçã: Se você tem o xampp ou qualquer outra ferramenta que inclua o mysql/mariadb, é importante que remova completamente para evitar conflitos.
 
 ## Download
 

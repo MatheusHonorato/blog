@@ -7,17 +7,17 @@ summary: 'Neste artigo você aprenderá como melhorar a qualidade do seu código
 image: '/static/images/clean-code-porta.jpg'
 ---
 
-Você sabe que o principal gargalo no desenvolvimento de software está justamente na manutenção? Ou seja, um código mal escrito desde a sua primeira versão pode funcionar, mas vai gerar muitos prejuízos.
+Você sabe que o principal gargalo no desenvolvimento de software é justamente a manutenção? Ou seja, um código mal escrito desde a sua primeira versão pode funcionar, mas vai gerar muitos prejuízos.
 
-O que é custoso em um projeto de software não são os momentos iniciais e as primeiras features, mas sim a manutenção e evolução, momento em que trabalhamos com muito código já existente.
+O que é caro em um projeto de software não são os momentos iniciais e as primeiras features, mas sim a manutenção e evolução, momento em que trabalhamos com muito código já existente.
 
-Gastamos em média dez vezes mais tempo lendo código do que programando. Sendo assim é importante que se enscreva pensando em quem vai ler. Estamos nos comunicando com outros desenvolvedores por meio do código. Se a comunicação é ruim desperdiçamos tempo e muitas vezes até inviabilizamos o projeto. Uma boa forma de percebermos isso é analisando o gráfico a seguir.
+Gastamos em média dez vezes mais tempo lendo código do que programando. Sendo assim é importante que se enscreva pensando em quem vai ler, afinal estamos nos comunicando com outros desenvolvedores por meio do código. Se a comunicação é ruim desperdiçamos tempo e muitas vezes até inviabilizamos o projeto. Uma boa forma de percebermos isso é analisando o gráfico a seguir.
 
 ![Produtividade x Tempo](/static/images/clean-code-produtividadeXtempo.png)
 
 ## O que é
 
-Agora que você sabe da importância de escrever um bom código para que seja mais fácil evoluir e dar manutenção (parte mais custosa do processo), está na hora de saber o que é clean code e como isso pode te ajudar a codificar melhor.
+Agora que você sabe da importância de escrever um bom código para que seja mais fácil evoluir e dar manutenção, parte mais cara do processo, está na hora de saber o que é clean code e como isso pode te ajudar a codificar melhor.
 
 De acordo com Robert Cecil Martin, conhecido na comunidade como Uncle Bob e autor do livro Clean Code: A Handbook of Agile Software Craftsmanship, código limpo é um código claro e fácil de ser mantido, diz o que faz e pode ser lido como uma história, possibilitando uma maior legibilidade e manutenabilidade.
 
@@ -29,7 +29,7 @@ A seguir você irá ter acesso a um resumo dos principais pontos sobre clean cod
 
 #### Regra do escoteiro
 
-Sempre deixe o código mais limpo do que estava antes. Se temos o hábito de sempre deixar o código que trabalhamos melhor do que encontramos, o código não se degrada. Não precuisa necessariamente serem sempre grandes mudanças, a refatoração do nome de uma variável ou função já causa grande impacto.
+Sempre deixe o código mais limpo do que estava antes. Se deixamos sempre o código que trabalhamos melhor do que encontramos, o código não se degrada. Não precisa necessariamente serem sempre grandes mudanças, a refatoração do nome de uma variável ou função já causa grande impacto.
 
 #### Nomes são muito importantes
 
@@ -52,7 +52,7 @@ let user = {}; // objeto contendo dados do usuário
 
 * ##### Utilize nomes pronunciáveis e passíveis de busca
 
-Além de revelar a intenção, precisamos ser capazes de pronunciar, melhor ainda se podermos pesquisar por eles no código com facilidade. A principal prática é que estamos escrevendo códigos legíveis para humanos. Utilizar siglas, diminutivos ou abreviações, só vão te fazer pensar mais, você perderá tempo deduzindo a intenção da variável.
+Além de revelar a intenção, precisamos ser capazes de pronunciar, melhor ainda se podermos pesquisar por eles no código com facilidade. A principal ideia é que estamos escrevendo códigos legíveis para humanos. Utilizar siglas, diminutivos ou abreviações, só vão te fazer pensar mais, você perderá tempo deduzindo a intenção da variável.
 
 Exemplo:
 
@@ -86,7 +86,7 @@ let roles = {
 
 * ##### Não use o tipo da variável no nome
 
-Uma abordagem antiga era adicionarmos um prefixo no nome das variáveis. Hoje, isto já não é mais uma boa prática. Atribuir um prefixo só aumentará a complexidade do seu código, algo que não contribui em nada no projeto.
+Uma abordagem antiga era adicionarmos um prefixo no nome das variáveis. Hoje, isto já não é mais uma boa prática. Atribuir um prefixo só aumentará a complexidade do seu código, algo que não contribui no projeto.
 
 Exemplo:
 
@@ -103,7 +103,7 @@ let price = 12.1;
 
 * ##### Não utilize números ou strings mágicas
 
-Quando você estiver escrevendo algum código, nunca atribua uma string ou número direto no código fonte (hardcode) a uma variável. Declare uma constante e atribua o valor a esta constante.
+Quando você estiver escrevendo código, nunca atribua uma string ou número direto no código fonte (hardcode) a uma variável. Declare uma constante e atribua o valor a esta constante.
 
 Exemplo:
 
@@ -112,17 +112,17 @@ Exemplo:
 setTimeout (checkAuthentication, 1000); 
 user.role = "guest";
 // bom 😃
-let TIME_AWAIT = 1000; 
-let GUEST_ROLE = "guest";
+const TIME_AWAIT = 1000; 
+const GUEST_ROLE = "guest";
 setTimeout (checkAuthentication, TIME_AWAIT); 
 user.rolE = GUEST_ROLE;
 ```
 
 * ##### Defina um vocabulário para o mesmo tipo de dado
 
-Se você precisa recuperar informações de um produto, todos do time devem se referir a este dado de forma igual. Na prática, é bem comum ver declarações que retornam o mesmo tipo de dados com nomes variados. Por exemplo, getProductData, getProductInfo ou getProductDetails retornam os mesmos dados de um produto. Simplifique e use apenas getProduct().
+Se você precisa recuperar informações de um produto, todos do time devem se referir a este dado de forma igual. Na prática, é bem comum ver declarações que retornam o mesmo tipo de dados com nomes diferentes. Por exemplo, getProductData, getProductInfo ou getProductDetails retornam os mesmos dados de um produto. Simplifique e use apenas getProduct().
 
-Nesse tipo de situação é importante que se adote uma convenção que faça sentido para seu time e contexto de negócio.
+Neste tipo de situação é importante que se adote uma convenção que faça sentido para seu time e contexto de negócio.
 
 Exemplo:
 
@@ -160,7 +160,7 @@ getInvoice();
 
 * ##### Para classes e objetos utilize substantivos
 
-Uma boa pratica para nomearmos nossas classes seria utilizando substantivos.
+Uma boa prática para nomearmos nossas classes seria utilizando substantivos.
 
 Exemplo: 
 
@@ -289,7 +289,7 @@ Comentários mentem! Códigos são constantemente modificados enquanto os coment
 
 Uma boa observação é não utilizar o comentário para explicar a lógica implementada. Se o código precisa de um comentário para explicar o que faz provavelmente não está bem escrito.
 
-Deixe os comentários apenas para ocasiões realmente necessárias como, uma solução que foi implementada de determinada forma por limitação tecnica ou algo do tipo.
+Deixe os comentários apenas para ocasiões realmente necessárias como, uma solução que foi implementada de determinada forma por limitação técnica ou algo do tipo.
 
 ```javascript
 // ruim 👎
@@ -307,7 +307,7 @@ writeFile();
 
 Não pode existir duas partes do programa que desempenhem a mesma função.
 
-Faça de tudo para evitar código duplicado. Código duplicado quer dizer que existe mais de um lugar onde você deverá alterar algo se precisar mudar alguma lógica.
+Evite código duplicado. Código duplicado quer dizer que existe mais de um lugar onde você deverá alterar algo se precisar mudar alguma lógica.
 
 Exemplo: 
 
@@ -376,4 +376,4 @@ Então, Keep It Stupid Simple (Mantenha isto estupidamente simples - KISS)!
 
 # E aí.. curtiu? comenta aí
 
-Procurei neste artigo pontuar os principais itens da obra para quem está começando, mas é muito importante que leia este e outros livros do Uncle Bob para se aprofundar em como codificar melhor. Se você gostou do conteúdo compartilhe com o máximo de pessoas que puder. Se tiver condições de já adquirir o livro você pode comprar por este link.
+Procurei neste artigo pontuar os principais itens da obra para quem está começando, mas é muito importante que leia este e outros livros do Uncle Bob para se aprofundar em como codificar melhor. Se você gostou do conteúdo compartilhe com o máximo de pessoas que puder. Se tiver condições de adquirir o livro você pode comprar por este link.
