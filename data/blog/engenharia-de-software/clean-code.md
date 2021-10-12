@@ -21,7 +21,7 @@ Agora que você sabe da importância de escrever um bom código para que seja ma
 
 De acordo com Robert Cecil Martin, conhecido na comunidade como Uncle Bob e autor do livro Clean Code: A Handbook of Agile Software Craftsmanship, código limpo é um código claro e fácil de ser mantido, diz o que faz e pode ser lido como uma história, possibilitando uma maior legibilidade e manutenabilidade.
 
-![CRUD PHP](/static/images/clean-code-uncle-bob.png)
+![CLEAN CODE](/static/images/clean-code-uncle-bob.png)
 
 ## Principais pontos
 
