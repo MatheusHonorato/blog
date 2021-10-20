@@ -376,4 +376,4 @@ Então, Keep It Stupid Simple (Mantenha isto estupidamente simples - KISS)!
 
 # E aí.. curtiu? comenta aí
 
-Procurei neste artigo pontuar os principais itens da obra para quem está começando, mas é muito importante que leia este e outros livros do Uncle Bob para se aprofundar em como codificar melhor. Se você gostou do conteúdo compartilhe com o máximo de pessoas que puder. Se tiver condições de adquirir o livro você pode comprar por este link.
+Procurei neste artigo pontuar os principais itens da obra para quem está começando, mas é muito importante que leia este e outros livros do Uncle Bob para se aprofundar em como codificar melhor. Se você gostou do conteúdo compartilhe com o máximo de pessoas que puder. Se tiver condições de adquirir o livro você pode comprar por este [link](https://amzn.to/3jha8Uw).
