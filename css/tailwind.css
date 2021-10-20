@@ -17,3 +17,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.yellow-banner {
+  background-color: #FAA72F;
+}
