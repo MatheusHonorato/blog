@@ -52,7 +52,7 @@ let user = {}; // objeto contendo dados do usuário
 
 * ##### Utilize nomes pronunciáveis e passíveis de busca
 
-Além de revelar a intenção, precisamos ser capazes de pronunciar, melhor ainda se podermos pesquisar por eles no código com facilidade. A principal ideia é que estamos escrevendo códigos legíveis para humanos. Utilizar siglas, diminutivos ou abreviações, só vão te fazer pensar mais, você perderá tempo deduzindo a intenção da variável.
+Além de revelar a intenção, precisamos ser capazes de pronunciar, melhor ainda se pudermos pesquisar por eles no código com facilidade. A principal ideia é que estamos escrevendo códigos legíveis para humanos. Utilizar siglas, diminutivos ou abreviações, só vão te fazer pensar mais, você perderá tempo deduzindo a intenção da variável.
 
 Exemplo:
 
