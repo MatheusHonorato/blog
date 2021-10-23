@@ -45,9 +45,9 @@ Exemplo:
 
 ```javascript
 // ruim 👎
-let x = {}; // objeto contendo dados do usuário
+let x = {};
 // bom 😃
-let user = {}; // objeto contendo dados do usuário
+let user = {};
 ```
 
 * ##### Utilize nomes pronunciáveis e passíveis de busca
@@ -172,7 +172,6 @@ let X = class {
     this.width = width;
   }
 };
-
 // bom 😃
 let Rectangle = class {
   constructor(heigth, width) {
@@ -196,38 +195,37 @@ Exemplo:
 // ruim 👎
 function parseBetterJSAlternative(code) {
   const REGEXES = [
-    // ...
+  
   ];
 
   const statements = code.split(' ');
   const tokens = [];
   REGEXES.forEach((REGEX) => {
     statements.forEach((statement) => {
-      // ...
+
     });
   });
 
   const ast = [];
   tokens.forEach((token) => {
-    // lex...
+
   });
 
   ast.forEach((node) => {
-    // parse...
+
   });
 }
-
 // bom 😃
 function tokenize(code) {
   const REGEXES = [
-    // ...
+
   ];
 
   const statements = code.split(' ');
   const tokens = [];
   REGEXES.forEach((REGEX) => {
     statements.forEach((statement) => {
-      tokens.push( /* ... */ );
+      tokens.push();
     });
   });
 
@@ -237,7 +235,7 @@ function tokenize(code) {
 function lexer(tokens) {
   const ast = [];
   tokens.forEach((token) => {
-    ast.push( /* ... */ );
+    ast.push();
   });
 
   return ast;
@@ -247,7 +245,7 @@ function parseBetterJSAlternative(code) {
   const tokens = tokenize(code);
   const ast = lexer(tokens);
   ast.forEach((node) => {
-    // parse...
+
   });
 }
 ```
@@ -269,7 +267,6 @@ function emailClients(clients) {
     }
   });
 }
-
 // bom 😃
 function emailActiveClients(clients) {
   clients
@@ -342,7 +339,6 @@ function showManagerList(managers) {
     render(data);
   });
 }
-
 // bom 😃
 function showEmployeeList(employees) {
   employees.forEach((employee) => {
@@ -377,3 +373,5 @@ Então, Keep It Stupid Simple (Mantenha isto estupidamente simples - KISS)!
 # E aí.. curtiu? comenta aí
 
 Procurei neste artigo pontuar os principais itens da obra para quem está começando, mas é muito importante que leia este e outros livros do Uncle Bob para se aprofundar em como codificar melhor. Se você gostou do conteúdo compartilhe com o máximo de pessoas que puder. Se tiver condições de adquirir o livro você pode comprar por este [link](https://amzn.to/3jha8Uw).
+
+Você também pode conhecer mais exemplos em javascript [aqui](https://github.com/felipe-augusto/clean-code-javascript).
