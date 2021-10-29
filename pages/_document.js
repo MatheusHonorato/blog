@@ -78,6 +78,7 @@ class MyDocument extends Document {
           `,
             }}
           />
+          <meta name="msvalidate.01" content="DA649940CBACA628883414C03E3EC298" />
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
           <Main />
