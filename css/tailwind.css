@@ -18,6 +18,13 @@ html {
   scroll-behavior: smooth;
 }
 
+#banner-top {
+  padding-top: 85.313px;
+}
+
 .yellow-banner {
+  position: fixed;
+  width: 100%;
   background-color: #FAA72F;
+  z-index: 10;
 }

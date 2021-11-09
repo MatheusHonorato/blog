@@ -81,6 +81,9 @@ class MyDocument extends Document {
           <meta name="msvalidate.01" content="DA649940CBACA628883414C03E3EC298" />
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
+        <div className="flex flex-col items-center yellow-banner">
+          <a href="https://go.hotmart.com/S61245531F" rel="nofollow"><img src="http://celke.com.br/clms/assets/imagens/img_hotmart/84566/curso_php_developer_768x90_v1.jpg" border="0" width="728" height="90" /></a>
+        </div>
           <Main />
           <NextScript />
         </body>

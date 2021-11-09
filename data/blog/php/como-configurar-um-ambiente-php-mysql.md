@@ -80,5 +80,3 @@ Após efetuar o download execute o instalador e confirme a instalação clicando
 Acesse o arquivo 'php.ini' dentro do diretório '/php'. Para habilitar a lib 'mysqli' descomente a linha 'extension=mysqli' removendo o ';' no inicio da linha. Se deseja utilizar PDO descomente a linha 'extension=pdo_mysql'. Para efetivar a alteração reinicie o servidor do php.
 
 ![php.ini](/static/images/php-ini.jpg)
-
-<a href="https://go.hotmart.com/S61245531F" rel="nofollow"><img src="http://celke.com.br/clms/assets/imagens/img_hotmart/84566/curso_php_developer_768x90_v1.jpg" border="0" width="100%" /></a>
