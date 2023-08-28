@@ -3,10 +3,10 @@
   "version": "0.3.2",
   "private": true,
   "scripts": {
-    "start": "next-remote-watch ./data --openssl-legacy-provider start",
-    "dev": "next dev",
-    "build": "next build && node ./scripts/generate-sitemap",
-    "serve": "next start",
+    "start": "set NODE_OPTIONS=--openssl-legacy-provider && next-remote-watch ./data",
+    "dev": "set NODE_OPTIONS=--openssl-legacy-provider && next dev",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && next build && node ./scripts/generate-sitemap",
+    "serve": "set NODE_OPTIONS=--openssl-legacy-provider && next start",
     "analyze": "env ANALYZE=true next build",
     "prepare": "husky install"
   },
