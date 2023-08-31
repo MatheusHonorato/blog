@@ -67,7 +67,6 @@ class Relatorio
 
 No exemplo acima a classe **Relatorio** possui duas responsabilidades: trazer os dados do relatório e formatar os dados do relatório.
 
-
 Refatorando:
 
 ```php
