@@ -1,9 +1,9 @@
 ---
 title: 'SOLID: Princípios da programação orientada a objetos'
 date: '2023-08-28'
-tags: ['solid', 'clean code', 'poo', 'orientação a objetos', 'php', 'engenharia de software']
+tags: ['solid', 'clean code', 'código limpo', 'poo', 'orientação a objetos', 'php', 'engenharia de software']
 draft: false
-summary: 'Neste artigo você aprenderá como melhorar a qualidade do seu código utilizando SOLID (Princípios da POO).
+summary: 'Neste artigo você aprenderá como melhorar a qualidade do seu código utilizando SOLID (Princípios da POO).'
 image: '/static/images/solid.jpg'
 ---
 
