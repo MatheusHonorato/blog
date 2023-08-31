@@ -1,22 +1,28 @@
 ---
-title: 'SOLID - O guia definitivo'
+title: 'SOLID: Princípios da programação orientada a objetos'
 date: '2023-08-28'
 tags: ['solid', 'clean code', 'código limpo', 'engenharia de software']
 draft: false
-summary: 'Neste artigo você aprenderá como melhorar a qualidade do seu código utilizando os princípios SOLID.'
+summary: 'Neste artigo você aprenderá como melhorar a qualidade do seu código utilizando os princípios SOLID. (Exemplos em PHP)'
 image: '/static/images/solid.jpg'
 ---
 
-<div className="flex items-center justify-between">
-    <img src="/static/images/solid.jpg" alt="SOLID"/>
+<div className="flex justify-center">
+    <figure class="flex flex-col items-center">
+        <img src="/static/images/solid.jpg" title="SOLID" alt="SOLID"/>
+        <figcaption>Fonte: <a href="https://www.freecodecamp.org/news/content/images/2020/08/solid.png" target="_blank">https://www.freecodecamp.org/news/content/images/2020/08/solid.png</a></figcaption>
+    </figure>
 </div>
 
-Fala, Galera! Neste artigo vamos aprender sobre SOLID. Mas afinal o que é SOLID? SOLID é um acrônimo mnemônico criado por Michael Feathers. O acrônimo SOLID foi criado a partir dos princípios de design de software para POO mais relevantes identificados por Robert Cecil Martin (Uncle Bob). Os princípios SOLID te auxiliam a desenvolver código orientado a objetos mais legível, fácil de manter, extensível, reutilizável e sem repetição, ou seja, com os princípios SOLID desenvolvemos código limpo e com mais qualidade. A seguir temos a lista destes cinco princípios com exemplos na linguagem de programação PHP.
+<p className="text-justify">Fala, Galera! Neste artigo vamos aprender sobre SOLID. Mas afinal o que é SOLID? SOLID é um acrônimo mnemônico criado por Michael Feathers. O acrônimo SOLID foi criado a partir dos princípios de design de software para POO mais relevantes identificados por Robert Cecil Martin (Uncle Bob). Os princípios SOLID te auxiliam a desenvolver código orientado a objetos mais legível, fácil de manter, extensível, reutilizável e sem repetição, ou seja, com os princípios SOLID desenvolvemos código limpo e com mais qualidade. A seguir temos a lista destes cinco princípios com exemplos na linguagem de programação PHP.</p>
 
 1. Single responsibility principle (Princípio da responsabilidade única):
 
 <div className="flex justify-center">
-    <img  src="/static/images/responsabilidade-unica.jpg" title="Responsabilidade única" alt="Responsabilidade única"/>
+    <figure class="flex flex-col items-center">
+        <img  src="/static/images/responsabilidade-unica.jpg" title="Responsabilidade única" alt="Responsabilidade única"/>
+        <figcaption>Fonte: <a href="https://miro.medium.com/v2/resize:fit:500/1*PxIES4LBAMi8K4RudiP-tw.jpeg" target="_blank">https://miro.medium.com/v2/resize:fit:500/1*PxIES4LBAMi8K4RudiP-tw.jpeg</a></figcaption>
+    </figure>
 </div>
 
 O princípio da responsabilidade única diz que uma classe deve possuir apenas uma razão para mudar, garantindo assim que não acumule responsabilidades. Quanto mais uma classe acumula responsabilidades, mais difícil é utilizá-la e monitorar efeitos colaterais em outras partes do sistema quando a alteramos. De acordo com o SRP, uma classe deve ter apenas um objetivo quando se trata do fluxo em um software.
@@ -103,7 +109,10 @@ Criamos a classe **FormatadorJsonRelatorio** para assumir a responsabilidade de 
 2. Open closed principle (Princípio aberto/fechado)
 
 <div className="flex justify-center">
-    <img  src="/static/images/aberto-fechado.jpg" title="Aberto Fechado" alt="Aberto Fechado"/>
+    <figure class="flex flex-col items-center">
+        <img  src="/static/images/aberto-fechado.jpg" title="Aberto Fechado" alt="Aberto Fechado"/>
+        <figcaption>Fonte: <a href="https://deviq.com/static/a86f9b76c26f80c3749264670efb2347/066f9/open-closed-principle-400x400.jpg" target="_blank">https://deviq.com/static/a86f9b76c26f80c3749264670efb2347/066f9/open-closed-principle-400x400.jpg</a></figcaption>
+    </figure>
 </div>
 
 O princípio aberto/fechado diz que entidades de software (classes, módulos, funções) devem estar abertas para extensão e fechadas para modificação. O que isso quer dizer? Basicamente que para adicionar funcionalidades no sistema não deve ser necessário modificar classes já existentes, aumentando a complexidade do código e a probabilidade de novos erros. Sempre que for necessário criar um novo recurso, devemos criar uma nova classe que o implemente, ou seja, não podemos adicionar o novo recurso em uma classe já existente.
@@ -177,7 +186,10 @@ Como pode ser observado, criamos classes escritoras que implementam a mesma inte
 3. Liskov substitution principle (Princípio da substituição de Liskov)
 
 <div className="flex justify-center">
+    <figure class="flex flex-col items-center">
     <img width="80%" src="/static/images/liskov-substitution.jpg" title="Substituição de Liskov" alt="Substituição de Liskov"/>
+        <figcaption>Fonte: <a href="https://thinkdifferent0.files.wordpress.com/2017/07/liskovsubtitutionprinciple_52bb5162.jpg?w=750&h=600&crop=1" target="_blank">https://thinkdifferent0.files.wordpress.com/2017/07/liskovsubtitutionprinciple_52bb5162.jpg?w=750&h=600&crop=1</a></figcaption>
+    </figure>
 </div>
 
 O princípio da substituição de Liskov, introduzido por Barbara Liskov em ‘Data Abstraction’ (1987) diz que classes derivadas devem ser substituíveis por sua classe base ou classes irmãs. O que isso quer dizer? basicamente que uma instância da classe base deve poder ser substituída por uma instância de sua classe filha e o comportamento do programa deve se manter o mesmo.
@@ -298,7 +310,10 @@ Para resolver o problema foi criado uma interface mais genérica chamada **Forma
 4. Interface segregation principle (Princípio da segregação de interfaces)
 
 <div className="flex justify-center">
-    <img src="/static/images/segregacao-interfaces.jpg" title="Segregação de interfaces" alt="Segregação de interfaces"/>
+    <figure class="flex flex-col items-center">
+        <img src="/static/images/segregacao-interfaces.jpg" title="Segregação de interfaces" alt="Segregação de interfaces"/>
+        <figcaption>Fonte: <a href="https://deviq.com/static/a407170392150a90b0ce412ad2878174/066f9/interface-segregation-400x400.jpg" target="_blank">https://deviq.com/static/a407170392150a90b0ce412ad2878174/066f9/interface-segregation-400x400.jpg</a></figcaption>
+    </figure>
 </div>
 
 O princípio da segregação de interfaces diz que uma classe não deve ser obrigada a implementar métodos que não utiliza. Resumindo: Interfaces específicas são melhores que interfaces inchadas.
@@ -397,8 +412,12 @@ Agora quebramos a interface **Funcionario** em interfaces mais específicas para
 5. Dependency inversion principle (Princípio da inversão de dependência)
 
 <div className="flex justify-center">
-    <img src="/static/images/inversao-dependencia.jpg" title="Inversão de dependência" alt="Inversão de dependência"/>
+    <figure class="flex flex-col items-center">
+        <img src="/static/images/inversao-dependencia.jpg" title="Inversão de dependência" alt="Inversão de dependência"/>
+        <figcaption>Fonte: <a href="https://deviq.com/static/a407170392150a90b0ce412ad2878174/066f9/interface-segregation-400x400.jpg" target="_blank">https://deviq.com/static/a407170392150a90b0ce412ad2878174/066f9/interface-segregation-400x400.jpg</a></figcaption>
+    </figure>
 </div>
+
 
 O princípio da inversão de dependência diz que não devemos depender de implementações concretas, mas sim de abstrações. Resumindo: A tipagem dos nossos parâmetros devem ser classes abstratas ou interfaces, garantindo assim maior facilidade se quisermos trocar a implementação do objeto que passamos como parâmetro. Dessa forma utilizar instâncias de outras classes como parâmetro fica mais fácil, pois não dependemos de uma classe concreta, mas de uma abstração, então basta a nossa classe estender uma classe abstrata ou implementar uma interface. Esse princípio também contribui para o desenvolvimento de testes, pois facilita a criação de mocks/stubs, basta que o mock estenda a classe abstrata ou implemente a interface que utilizamos como tipagem no nosso parâmetro.
 
