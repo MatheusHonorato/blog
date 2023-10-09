@@ -10,7 +10,7 @@ image: '/static/images/solid.jpg'
 <div className="flex justify-center">
     <figure class="flex flex-col items-center">
         <img src="/static/images/solid.jpg" title="SOLID" alt="SOLID"/>
-        <figcaption>Fonte: <a href="https://www.freecodecamp.org/news/content/images/2020/08/solid.png" target="_blank">https://www.freecodecamp.org/news/content/images/2020/08/solid.png</a></figcaption>
+        <figcaption>Fonte: <a href="https://www.freecodecamp.org/news/content/images/2020/08/solid.png" target="_blank">https://www.freecodecamp.org</a></figcaption>
     </figure>
 </div>
 
@@ -21,7 +21,7 @@ image: '/static/images/solid.jpg'
 <div className="flex justify-center">
     <figure class="flex flex-col items-center">
         <img  src="/static/images/responsabilidade-unica.jpg" title="Responsabilidade única" alt="Responsabilidade única"/>
-        <figcaption>Fonte: <a href="https://miro.medium.com/v2/resize:fit:500/1*PxIES4LBAMi8K4RudiP-tw.jpeg" target="_blank">https://miro.medium.com/v2/resize:fit:500/1*PxIES4LBAMi8K4RudiP-tw.jpeg</a></figcaption>
+        <figcaption>Fonte: <a href="https://miro.medium.com/v2/resize:fit:500/1*PxIES4LBAMi8K4RudiP-tw.jpeg" target="_blank">https://miro.medium.com</a></figcaption>
     </figure>
 </div>
 
@@ -111,7 +111,7 @@ Criamos a classe **FormatadorJsonRelatorio** para assumir a responsabilidade de 
 <div className="flex justify-center">
     <figure class="flex flex-col items-center">
         <img  src="/static/images/aberto-fechado.jpg" title="Aberto Fechado" alt="Aberto Fechado"/>
-        <figcaption>Fonte: <a href="https://deviq.com/static/a86f9b76c26f80c3749264670efb2347/066f9/open-closed-principle-400x400.jpg" target="_blank">https://deviq.com/static/a86f9b76c26f80c3749264670efb2347/066f9/open-closed-principle-400x400.jpg</a></figcaption>
+        <figcaption>Fonte: <a href="https://deviq.com/static/a86f9b76c26f80c3749264670efb2347/066f9/open-closed-principle-400x400.jpg" target="_blank">https://deviq.com</a></figcaption>
     </figure>
 </div>
 
@@ -188,7 +188,7 @@ Como pode ser observado, criamos classes escritoras que implementam a mesma inte
 <div className="flex justify-center">
     <figure class="flex flex-col items-center">
     <img width="80%" src="/static/images/liskov-substitution.jpg" title="Substituição de Liskov" alt="Substituição de Liskov"/>
-        <figcaption>Fonte: <a href="https://thinkdifferent0.files.wordpress.com/2017/07/liskovsubtitutionprinciple_52bb5162.jpg?w=750&h=600&crop=1" target="_blank">https://thinkdifferent0.files.wordpress.com/2017/07/liskovsubtitutionprinciple_52bb5162.jpg?w=750&h=600&crop=1</a></figcaption>
+        <figcaption>Fonte: <a href="https://thinkdifferent0.files.wordpress.com/2017/07/liskovsubtitutionprinciple_52bb5162.jpg?w=750&h=600&crop=1" target="_blank">https://thinkdifferent0.files.wordpress.com</a></figcaption>
     </figure>
 </div>
 
@@ -312,7 +312,7 @@ Para resolver o problema foi criado uma interface mais genérica chamada **Forma
 <div className="flex justify-center">
     <figure class="flex flex-col items-center">
         <img src="/static/images/segregacao-interfaces.jpg" title="Segregação de interfaces" alt="Segregação de interfaces"/>
-        <figcaption>Fonte: <a href="https://deviq.com/static/a407170392150a90b0ce412ad2878174/066f9/interface-segregation-400x400.jpg" target="_blank">https://deviq.com/static/a407170392150a90b0ce412ad2878174/066f9/interface-segregation-400x400.jpg</a></figcaption>
+        <figcaption>Fonte: <a href="https://deviq.com/static/a407170392150a90b0ce412ad2878174/066f9/interface-segregation-400x400.jpg" target="_blank">https://deviq.com</a></figcaption>
     </figure>
 </div>
 
@@ -414,7 +414,7 @@ Agora quebramos a interface **Funcionario** em interfaces mais específicas para
 <div className="flex justify-center">
     <figure class="flex flex-col items-center">
         <img src="/static/images/inversao-dependencia.jpg" title="Inversão de dependência" alt="Inversão de dependência"/>
-        <figcaption>Fonte: <a href="https://deviq.com/static/a407170392150a90b0ce412ad2878174/066f9/interface-segregation-400x400.jpg" target="_blank">https://deviq.com/static/a407170392150a90b0ce412ad2878174/066f9/interface-segregation-400x400.jpg</a></figcaption>
+        <figcaption>Fonte: <a href="https://deviq.com/static/a407170392150a90b0ce412ad2878174/066f9/interface-segregation-400x400.jpg" target="_blank">https://deviq.com</a></figcaption>
     </figure>
 </div>
 
