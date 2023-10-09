@@ -1,7 +1,7 @@
 ---
 title: 'Clean code: o que é? porque usar? Resumo com exemplos!'
 date: '2021-10-6'
-tags: ['clean code', 'código limpo', 'engenharia de software']
+tags: ['clean code', 'codigo limpo', 'engenharia de software']
 draft: false
 summary: 'Neste artigo você aprenderá como melhorar a qualidade do seu código utilizando clean code.'
 image: '/static/images/clean-code-porta.jpg'

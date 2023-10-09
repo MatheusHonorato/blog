@@ -1,7 +1,7 @@
 ---
 title: 'Orientação a objetos (POO): o que é ? (Exemplos em PHP)'
 date: '2023-10-09'
-tags: ['orientação a objetos', 'poo', 'engenharia de software', 'php']
+tags: ['orientacao a objetos', 'poo', 'engenharia de software', 'php']
 draft: false
 summary: 'Neste artigo você aprenderá de maneira simples o que é orientação a objetos e como utiliza-la de maneira correta utilizando PHP.'
 image: '/static/images/poo-php.jpg'
