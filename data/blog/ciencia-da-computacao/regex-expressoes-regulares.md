@@ -30,7 +30,8 @@ Tudo que digitarmos entre colchetes será localizado em todas as partes do texto
 
 Exemplo: 
 
-```[0]``` Localiza ocorrências do caracter 0 no texto.<br>
+```[0]``` Localiza ocorrências do caracter 0 no texto.
+
 ```[02]``` Localiza ocorrências do caracter 0 ou caracter 2 no texto.
 
 ### Traço
