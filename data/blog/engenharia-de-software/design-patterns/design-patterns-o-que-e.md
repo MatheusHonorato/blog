@@ -21,7 +21,7 @@ Padrões de projetos podem ser categorizados de diversas formas. As categorias m
 
 - Estruturais: Padrões para montar objetos e classes em estruturas maiores;
 
-- Comportamentais: Padrões para delegação de resonsabilidades.
+- Comportamentais: Padrões para delegação de responsabilidades.
 
 Aqui no nosso blog temos conteúdo sobre os padrões de projeto mais utilizados no mercado. Acesse-os e se aprofunde para evoluir a sua produtividade e qualidade de código.
 
