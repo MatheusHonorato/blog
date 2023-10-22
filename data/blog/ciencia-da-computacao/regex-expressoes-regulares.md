@@ -7,14 +7,14 @@ summary: 'Neste artigo você aprenderá de maneira simples o que é regex e como
 image: '/static/images/php.jpg'
 ---
 
-Fala, galera! neste artigo iremos aprender o que são expressões regulares (regex) e como utilizar com a linguagem de programação php.
+Fala, galera! Neste artigo iremos aprender o que são expressões regulares (regex) e como utilizá-las com a linguagem de programação PHP.
 
 ## O que é?
 
-Regex é uma abreviação para Regular Expressions (Expressões Regulares), notação utilizada para fazer verificações em textos com 3 princípais aplicações:
+Regex é uma abreviação para Regular Expressions (Expressões Regulares), notação utilizada para fazer verificações em textos com 3 principais aplicações:
 
 1 - Buscas: Buscar padrões que definem qual o formato esperado do texto que estamos procurando.
-Exemplo: Buscar todos os termos do texto que tem o formato de data dd/mm/yyyy sem saber exatamente qual data estamos procurando;
+Exemplo: Buscar todos os termos do texto que têm o formato de data dd/mm/yyyy sem saber exatamente qual data estamos procurando;
 
 2 - Validações: Verififcar se determinada sequência de caracteres atende ao padrão fornecido;
 
@@ -22,7 +22,7 @@ Exemplo: Buscar todos os termos do texto que tem o formato de data dd/mm/yyyy se
 
 ## Como funciona
 
-Uma expressão regular é definida a partir de uma sequência de caracteres, onde cada caracter tem um significado. A seguir temos os principais caracteres utilizados.
+Uma expressão regular é definida a partir de uma sequência de caracteres, onde cada caractere tem um significado. A seguir, temos os principais caracteres utilizados.
 
 ### Colchetes
 
@@ -30,9 +30,9 @@ Tudo que digitarmos entre colchetes será localizado em todas as partes do texto
 
 Exemplo: 
 
-```[0]``` Localiza ocorrências do caracter 0 no texto.
+```[0]``` Localiza ocorrências do caractere 0 no texto.
 
-```[02]``` Localiza ocorrências do caracter 0 ou caracter 2 no texto.
+```[02]``` Localiza ocorrências do caractere 0 ou caractere 2 no texto.
 
 ### Traço
 
@@ -42,7 +42,7 @@ Exemplo:
 
 ```[0-9]``` Localiza ocorrências de números entre 0 e 9.
 
-Para buscar por mais um caracter basta adicionar mais um colchete na sua string de busca.
+Para buscar por mais um caractere, basta adicionar um colchete na sua string de busca.
 
 Exemplo:
 
@@ -83,14 +83,14 @@ Exemplo:
 
 Exemplo:
 
-``` ^[0-9]+[-][a-z]$ ``` Localiza texto com os primeiros caracteres como digitos e o último como uma letra do alfabeto, separados pelo caracter traço.
+``` ^[0-9]+[-][a-z]$ ``` Localiza texto com os primeiros caracteres como dígitos e o último como uma letra do alfabeto, separados pelo caractere traço.
 
 Se quiser que a busca defina uma letra específica no final, basta trocar o conteúdo entre colchetes da última instrução pela letra que deseja.
 
 
 ## Prática
 
-A seguir exemplos práticos de expressões regulares para validar dados.
+A seguir, exemplos práticos de expressões regulares para validar dados.
 
 ### Exemplo CPF
 
@@ -105,18 +105,18 @@ Substituição de data no formato ano-mês-dia para dia-mês-ano
 "2010-12-20"
 
 * Localizar datas: ```[0-9]{4}[-][0-9]{2}[-][0-9]{2}```;
-* Colocar tudo que deve ser adicionado na substituição separando em grupos por parenteses: ```([0-9]{4})[-]([0-9]{2})[-]([0-9]{2})```;
-* Colocar o formato desejado identificando os grupos pelo indice: ```$3/$2/$1```.
+* Colocar tudo que deve ser adicionado na substituição, separando em grupos por parenteses: ```([0-9]{4})[-]([0-9]{2})[-]([0-9]{2})```;
+* Colocar o formato desejado, identificando os grupos pelo indice: ```$3/$2/$1```.
 
 ### Exemplo DDD
 
 ```^(\([0-9]{2}\)|[0-9]{2})$```
 
-No exemplo acima o caracter de circunflexo '^' define o início da expressão e o caracter cifrão '$' o final. Utilizamos o caracter pipe '|' para operação de 'ou', pois  validaremos DDDs
-com e sem parenteses. A esquerda temos o padrão de DDD com parenteeses e a direita sem parenteses. Perceba que no primeiro padrão precedemos os caracteres de parenteses com uma contra
-barra '\' . Isso quer dizer que esses parenteses fazem parte do padrão e devem ser utilizados literalmente e não interpretados como operador para definir grupos. Em seguida temos
-nossa primeira instrução de DDD '[0-9]', representando que é aceito um digito de 0 à 9 e em seguida '{2}'  operador para informar quantas vezes devemos aplicar essa instrução, no nosso
-caso duas vezes. Após o operador de pipe '|'repetimos a instrução sem os parenteses para tratarmos o DDD sem parenteses.
+No exemplo acima, o caractere circunflexo '^' define o início da expressão e o caractere cifrão '$' o final. Utilizamos o caractere pipe '|' para operação de 'ou', pois  validaremos DDDs
+com e sem parênteses. A esquerda temos o padrão de DDD com parenteeses e a direita sem parênteses. Perceba que, no primeiro padrão, precedemos os caracteres de parênteses com uma contra
+barra '\' . Isso quer dizer que esses parênteses fazem parte do padrão e devem ser utilizados literalmente e não interpretados como operador para definir grupos. Em seguida, temos
+nossa primeira instrução de DDD '[0-9]', representando que é aceito um digito de 0 a 9 e em seguida '{2}'  operador para informar quantas vezes devemos aplicar essa instrução (no nosso
+caso, duas vezes). Após o operador de pipe '|'repetimos a instrução sem os parênteses para tratarmos o DDD sem parênteses.
 
 Ferramenta para testar regex: https://regex101.com/
 
@@ -173,7 +173,7 @@ if (preg_match($padrao, $string)) {
 ```php
 
 $string = "123.456.789-10"
-$padrao = "/[^0-9]/";
+$padrao = "/^[0-9]*$/";
 
 $cpf = preg_replace($padrao, "", $string);
 
