@@ -2,7 +2,7 @@
 title: 'Repository: Design Patterns - o que é? porque usar? Resumo com exemplos em PHP!'
 date: '2023-11-17'
 tags: ['repository', 'design-patterns', 'php']
-draft: true
+draft: false
 summary: 'Neste artigo você aprenderá o que é o design pattern repository e como utiliza-lo para escrever códigos melhores.'
 image: '/static/images/repository.jpg'
 ---
