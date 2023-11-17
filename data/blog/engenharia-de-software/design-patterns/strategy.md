@@ -1,6 +1,6 @@
 ---
 title: 'Strategy: Design Patterns - o que é? porque usar? Resumo com exemplos em PHP!'
-date: '2023-10-18'
+date: '2023-11-15'
 tags: ['strategy', 'design-patterns', 'padroes-de-projeto', 'php']
 draft: false
 summary: 'Neste artigo você aprenderá o que é o design pattern strategy e como utiliza-lo para escrever códigos melhores.'
@@ -40,18 +40,18 @@ class FormData {
   private $find = “ “;  
   private $replace = “”;
 
-  public function __construct(string $input) {
-      $this->data = $input;
-  }
+    public function __construct(string $input) {
+        $this->data = $input;
+    }
 
     public function processar(string $filtro): string {
         if ($filtro == “html”) {
-                $this->data .= strip_tags($this->data);
+            $this->data .= strip_tags($this->data);
         }
 
 
         if ($filtro == “espaco”) {
-                $this->data .= str_replace($this->find, $this->replace, $this->data);
+            $this->data .= str_replace($this->find, $this->replace, $this->data);
         }
         return $this->data;
     }
