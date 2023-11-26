@@ -2,7 +2,7 @@
 title: 'Container IoC: Design Patterns - o que é? porque usar? Resumo com exemplos em PHP!'
 date: '2023-11-26'
 tags: ['container-ioc', 'design-patterns', 'php']
-draft: true
+draft: false
 summary: 'Neste artigo você aprenderá o que é o design pattern container ioc e como utiliza-lo para escrever códigos melhores.'
 image: '/static/images/container.jpg'
 ---
@@ -85,8 +85,8 @@ Utilizamos um exemplo simples para compreender o conceito de container IoC, mas 
 
 Algumas opções conhecidas para PHP:
 
-- PHP-DI (Dependency Injection Container); https://php-di.org
-- Symfony DependencyInjection Component https://symfony.com/doc/current/components/dependency_injection.html
+- [PHP-DI (Dependency Injection Container)](https://php-di.org);
+- [Symfony DependencyInjection Component](https://symfony.com/doc/current/components/dependency_injection.html)
 
 ## Trabalhando com PHP-DI
 
