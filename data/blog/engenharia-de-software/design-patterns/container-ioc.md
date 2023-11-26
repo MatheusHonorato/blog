@@ -4,7 +4,7 @@ date: '2023-11-26'
 tags: ['container-ioc', 'design-patterns','php', 'padroes-de-projeto']
 draft: false
 summary: 'Neste artigo você aprenderá o que é o design pattern container ioc e como utiliza-lo para escrever códigos melhores.'
-image: '/static/images/container.jpg'
+image: '/static/images/container-ioc.jpg'
 ---
 
 Fala, galera! Neste artigo iremos aprender um pouco mais sobre o padrão Container IoC e como implementa-lo na linguagem de programação PHP.
