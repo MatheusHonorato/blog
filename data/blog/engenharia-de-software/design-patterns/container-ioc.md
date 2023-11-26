@@ -64,12 +64,12 @@ $container->set(
 
 $container->set(
     key: UserRepository::class,
-    value: new UserRepository($container->make(key: Logger::class))
+    value: new UserRepository($container->get(key: Logger::class))
 );
 
 ```
 
-## (Make) Intanciando objetos a partir do container
+## Intanciando objetos a partir do container
 
 Para utilizar o container devemos instanciar as classes a partir dele. Perceba que para instanciarmos a classe Logger passamos somente seu nome e o nosso container já injeta todas as dependências que foram resolvidas no processo de bind.
 
