@@ -81,7 +81,7 @@ $logger = $container->get(key: Logger::class);
 
 ## Soluções em php para container IoC
 
-Utilizamos um exemplo simples para compreender o conceito de container IoC, mas se estiver desenvolvendo uma aplicação para colocar em produção recomendamos fortemente a utilização de uma pacote consolidado para implementar seu container.
+Utilizamos um exemplo simples para compreender o conceito de container IoC, mas se estiver desenvolvendo uma aplicação para colocar em produção recomendamos fortemente a utilização de um pacote consolidado para implementar seu container.
 
 Algumas opções conhecidas para PHP:
 
