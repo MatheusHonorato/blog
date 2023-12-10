@@ -12,7 +12,7 @@ Fala, galera! Neste artigo iremos aprender um pouco mais sobre o padrão injeç�
 ## Pré requisitos
 
 - PHP básico;
-- Programação Orientada a Objetos;
+- [Programação Orientada a Objetos](https://devcontratado.com/blog/engenharia-de-software/orientacao-a-objetos).
 
 ## Definição
 
