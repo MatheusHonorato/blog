@@ -15,11 +15,13 @@ Fala, galera! Neste artigo iremos aprender um pouco mais sobre o padrão Contain
 - Programação Orientada a Objetos;
 - Injeção de dependencia.
 
+## Definição
+
 Basicamente, Service Container (ou IoC Container) é uma ferramenta, para gerenciar de maneira centralizada dependências de classes e fazer uso do padrão de projeto injeção de dependencia. Com um Container IoC temos uma maneira de injetar automaticamente dependencias em uma classe ou componente.
 
 ## Classe Container
 
-Para configurarmos um container IoC é necessário uma classe para gerênciar a instância do container. A classe precisa conter um método para mapear (fazer um bind) das classes que iremos gerênciar e suas respectivas dependências e um método para resolver as instancias dos objetos.
+Para configurarmos um container IoC é necessário uma classe para gerencia-lo. A classe precisa conter um método para mapear (fazer um bind) de classes que iremos utilizar com suas respectivas dependências. Além disso também precisa de um método para resolver as instancias dos objetos que mapeamos no bind. A seguir temos um exemplo básico de implementação em PHP 8.
 
 ```php
 <?php
@@ -49,9 +51,9 @@ class Container
 
 ```
 
-## Fazendo o Bind das classes com suas dependências
+## Instanciando um container e mapeando dependencias
 
-Após instanciarmos o container ioc fazemos o bind das classes com suas dependências e armazenamos no array $bindings.
+Após instanciarmos o container ioc fazemos o bind das classes com suas dependências e armazenamos no array $bindings. No exemplo a seguir instanciamos e utilizamos a classe que definimos no topico anterior.
 
 ```php
 
@@ -69,9 +71,9 @@ $container->set(
 
 ```
 
-## Intanciando objetos a partir do container
+## Utilizando o container
 
-Para utilizar o container devemos instanciar as classes a partir dele. Perceba que para instanciarmos a classe Logger passamos somente seu nome e o nosso container já injeta todas as dependências que foram resolvidas no processo de bind.
+Para utilizar o container devemos instanciar nossas classes a partir dele. Perceba que para instanciarmos a classe ```Logger``` passamos somente seu nome e o nosso container já injeta todas as dependências que foram resolvidas no processo de bind, retornando a instância de ```Logger``` pronta.
 
 ```php
 
@@ -81,7 +83,7 @@ $logger = $container->get(key: Logger::class);
 
 ## Soluções em php para container IoC
 
-Utilizamos um exemplo simples para compreender o conceito de container IoC, mas se estiver desenvolvendo uma aplicação para colocar em produção recomendamos fortemente a utilização de um pacote consolidado para implementar seu container.
+No artigo utilizamos um exemplo simples para compreender o conceito de container IoC, mas se estiver desenvolvendo uma aplicação para colocar em produção recomendamos fortemente a utilização de um pacote consolidado para implementar seu container.
 
 Algumas opções conhecidas para PHP:
 
@@ -91,7 +93,6 @@ Algumas opções conhecidas para PHP:
 ## Trabalhando com PHP-DI
 
 PHP DI é uma das soluções mais conhecidas para containers DI no PHP. A seguir temos um exemplo simples mostrado na própria documentação de como utilizar o pacote. Perceba que a utilização basica do pacote é muito similar a do nosso exemplo.
-
 
 ### Configurando PHP DI
 
