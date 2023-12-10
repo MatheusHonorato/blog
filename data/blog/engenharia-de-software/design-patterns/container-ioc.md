@@ -12,8 +12,8 @@ Fala, galera! Neste artigo iremos aprender um pouco mais sobre o padrão Contain
 ## Pré requisitos
 
 - PHP básico;
-- Programação Orientada a Objetos;
-- Injeção de dependencia.
+- [Programação Orientada a Objetos](https://devcontratado.com/blog/engenharia-de-software/orientacao-a-objetos);
+- [Injeção de dependencia](https://devcontratado.com/blog/engenharia-de-software/design-patterns/injecao-de-dependencia).
 
 ## Definição
 
