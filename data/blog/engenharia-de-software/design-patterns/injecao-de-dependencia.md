@@ -16,9 +16,37 @@ Fala, galera! Neste artigo iremos aprender um pouco mais sobre o padrão injeç�
 
 ## Definição
 
-Injeção de dependência (DI, Dependency Injection) é um design pattern utilizado separar a criação e gerenciamento do estado interno de um objeto de suas dependências. Quando estamos utilizando injeção de dependência não instanciamos com a palavra chave ```new``` nossos objetos dentro da classe que estamos trabalhando, mas sim injetamos como parâmetros os objetos que precisamos, seja no método construtor ou em algum outro método.
+Injeção de dependência (DI, Dependency Injection) é um design pattern utilizado para separar a criação de um objeto de suas dependências. Quando estamos utilizando injeção de dependência não instanciamos nossas dependencias dentro da classe que estamos trabalhando, mas sim injetamos como parâmetros.
 
 ### Exemplos em PHP
+
+A seguir temos um exemplo sem o uso de injeção de dependencia. Logo depois temos três diferentes maneiras de aplicar este padrão: Constructor Injection, Method Injection e Property Injection.
+
+#### Sem utilização de injeção de dependencia
+
+No exemplo abaixo que criamos uma instancia da classe ```DependenciaA``` dentro do construtor de ```Exemplo```. A técnica funciona, mas perceba o quanto nosso código fica acoplado.
+
+```php
+<?php
+
+declare(strict_types=1);
+
+class Exemplo implements
+{
+    protected DependenciaA $dependenciaA;
+
+    public function __construct()
+    {
+        // Criação de dependencia interna
+        $this->dependenciaA = new DependenciaA;
+    }
+}
+
+```
+
+#### Injeção de Dependência por Construtor (Constructor Injection)
+
+Neste exemplo passamos nossas dependencias diretamente pelo método construtor. Esta abordagem é interessante por que só prosseguimos com o ciclo de vida do objeto se temos todas as dependencias instanciadas corretamente.
 
 ```php
 <?php
@@ -38,15 +66,48 @@ class Exemplo implements
     }
 }
 
+```
+
+### Injeção de Dependência por Método (Method Injection)
+
+Uma abordagem também frequente é a instanciação de dependencias por um método comum (Diferente do construtor). Essa abordagem tende a ser melhor do que uma criação de dependencia interna (sem injeção de dependencia), mas ainda não costuma funcionar tão bem como a abordagem anterior por que podemos criar nosso objeto sem saber tudo que realmente é necessário para utiliza-lo.
+
+```php
+
 class ExemploDois implements
 {
     protected DependenciaA $dependenciaA;
     protected DependenciaB $dependenciaB;
 
     // Injetando dependência por método comum
-    public function preencherDependencias(DependenciaA $dependenciaA, DependenciaB $dependenciaB)
+    public function preencherDependencias(DependenciaA $dependenciaA, DependenciaB $dependenciaB): void
     {
         $this->dependenciaA = $dependenciaA;
+        $this->dependenciaB = $dependenciaB;
+    }
+}
+```
+
+### Injeção de Dependência por Propriedade (Property Injection)
+
+Neste exemplo temos métodos especificos para injetarmos as dependencias de cada propriedade. É muito frequente chamarmos esses métodos de 'setters'.
+
+```php
+
+class ExemploDois implements
+{
+    protected DependenciaA $dependenciaA;
+    protected DependenciaB $dependenciaB;
+
+    // Injetando dependência por método setter
+    public function setDependenciaA(DependenciaA $dependenciaA): void
+    {
+        $this->dependenciaA = $dependenciaA;
+    }
+
+    // Injetando dependência por método setter
+    public function setDependenciaB(DependenciaB $dependenciaB): void
+    {
         $this->dependenciaB = $dependenciaB;
     }
 }
