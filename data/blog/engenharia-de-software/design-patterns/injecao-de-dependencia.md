@@ -2,7 +2,7 @@
 title: 'Injeção de dependencia: Design Patterns - o que é? porque usar? Resumo com exemplos em PHP!'
 date: '2023-11-26'
 tags: ['dependency-injection', 'design-patterns','php', 'padroes-de-projeto', 'injecao-de-dependencia']
-draft: true
+draft: false
 summary: 'Neste artigo você aprenderá o que é o design pattern injeção de dependencia e como utiliza-lo para escrever códigos melhores.'
 image: '/static/images/injecao-de-dependencia.jpg'
 ---
