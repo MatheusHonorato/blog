@@ -68,7 +68,7 @@ class Exemplo implements
 
 ```
 
-### Injeção de dependência por método (Method Injection)
+#### Injeção de dependência por método (Method Injection)
 
 Uma abordagem também frequente é a instanciação de dependências por um método comum (Diferente do construtor). Essa abordagem tende a ser melhor do que uma criação de dependencia interna (sem injeção de dependencia), mas ainda não costuma funcionar tão bem como a abordagem anterior por que podemos criar nosso objeto sem saber tudo que realmente é necessário para utiliza-lo.
 
@@ -88,7 +88,7 @@ class ExemploDois implements
 }
 ```
 
-### Injeção de dependência por propriedade (Property Injection)
+#### Injeção de dependência por propriedade (Property Injection)
 
 Neste exemplo temos métodos especificos para injetarmos as dependências de cada propriedade. É muito frequente chamarmos esses métodos de 'setters'.
 
