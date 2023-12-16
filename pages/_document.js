@@ -77,7 +77,16 @@ class MyDocument extends Document {
             });
           `,
             }}
-          />
+          />  
+
+          <script id="mcjs"
+            dangerouslySetInnerHTML={{
+              __html: `
+              !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/98c7c1316ae9b9e57376707b9/4771f8a1d59b26a81c14da42c.js");
+              `,
+            }}
+          />        
+
           <meta name="msvalidate.01" content="DA649940CBACA628883414C03E3EC298" />
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
