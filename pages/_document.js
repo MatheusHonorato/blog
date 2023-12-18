@@ -61,6 +61,10 @@ class MyDocument extends Document {
             integrity="sha384-t5CR+zwDAROtph0PXGte6ia8heboACF9R5l/DiY+WZ3P2lxNgvJkQk5n7GPvLMYw"
             crossOrigin="anonymous"
           />
+
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css"/>
+          <link href="/static/style.mailchip.form.css" rel="stylesheet" type="text/css"/>
+          
           <meta
             name="google-site-verification"
             content="8dHMZxup35moYXc7M8xYaL9v-dIuQbHrZtO9PWUL3lo"
@@ -85,14 +89,40 @@ class MyDocument extends Document {
               !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/98c7c1316ae9b9e57376707b9/4771f8a1d59b26a81c14da42c.js");
               `,
             }}
-          />        
+          />   
+
+          <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"/>      
+
+          <script type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function($) {
+                  window.fnames = new Array();
+                  window.ftypes = new Array();
+                  fnames[0]='EMAIL';
+                  ftypes[0]='email';
+                  fnames[1]='FNAME';
+                  ftypes[1]='text';
+                  fnames[2]='LNAME';
+                  ftypes[2]='text';
+                  fnames[3]='ADDRESS';
+                  ftypes[3]='address';
+                  fnames[4]='PHONE';
+                  ftypes[4]='phone';
+                  fnames[5]='BIRTHDAY';
+                  ftypes[5]='birthday';
+                }(jQuery));
+                var $mcj = jQuery.noConflict(true);
+              `,
+            }}
+          />    
 
           <meta name="msvalidate.01" content="DA649940CBACA628883414C03E3EC298" />
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
-        <div className="flex flex-col items-center yellow-banner">
-          <a href="https://go.hotmart.com/S61245531F" rel="nofollow"><img src="http://celke.com.br/clms/assets/imagens/img_hotmart/84566/curso_php_developer_768x90_v1.jpg" border="0" width="728" height="90" /></a>
-        </div>
+          <div className="flex flex-col items-center yellow-banner">
+            <a href="https://go.hotmart.com/S61245531F" rel="nofollow"><img src="http://celke.com.br/clms/assets/imagens/img_hotmart/84566/curso_php_developer_768x90_v1.jpg" border="0" width="728" height="90" /></a>
+          </div>
           <Main />
           <NextScript />
         </body>

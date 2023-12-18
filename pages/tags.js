@@ -1,4 +1,5 @@
 import Link from '@/components/Link'
+import MailChipForm from '@/components/MailChipForm'
 import { PageSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
@@ -43,6 +44,7 @@ export default function Tags({ tags }) {
           })}
         </div>
       </div>
+      <MailChipForm/>
     </>
   )
 }

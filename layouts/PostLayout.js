@@ -1,4 +1,5 @@
 import Link from '@/components/Link'
+import MailChipForm from '@/components/MailChipForm'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSeo } from '@/components/SEO'
@@ -111,6 +112,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   &larr; Voltar
                 </Link>
               </div>
+              <MailChipForm/>
             </footer>
           </div>
         </div>

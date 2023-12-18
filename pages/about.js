@@ -1,6 +1,7 @@
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import { PageSeo } from '@/components/SEO'
+import MailChipForm from '@/components/MailChipForm'
 
 export default function About() {
   return (
@@ -38,6 +39,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <MailChipForm/>
     </>
   )
 }

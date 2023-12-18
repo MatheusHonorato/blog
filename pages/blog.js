@@ -2,6 +2,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { PageSeo } from '@/components/SEO'
+import MailChipForm from '@/components/MailChipForm'
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -18,6 +19,7 @@ export default function Blog({ posts }) {
         url={`${siteMetadata.siteUrl}/blog`}
       />
       <ListLayout posts={posts} title="Todos os Posts" />
+      <MailChipForm/>
     </>
   )
 }
