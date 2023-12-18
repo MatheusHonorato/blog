@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "DevContratado",
+  "short_name": "DevContratado",
   "icons": [
     {
       "src": "/android-chrome-96x96.png",
@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#16BEDA",
+  "background_color": "#16BEDA",
   "display": "standalone"
 }

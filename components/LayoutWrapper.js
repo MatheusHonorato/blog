@@ -14,10 +14,7 @@ const LayoutWrapper = ({ children }) => {
         <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label="Tailwind CSS Blog">
-              <div className="flex items-center justify-between">
-                <div className="mr-3">
-                  <Logo />
-                </div>
+              <div className="flex items-center justify-between">               
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">
                     {siteMetadata.headerTitle}
