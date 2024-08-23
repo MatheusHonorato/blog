@@ -10,7 +10,7 @@ image: '/static/images/crud-php.jpg'
 ### Pré-requisitos:
 
 - Noções básicas de desenvolvimento web;
-- Conhecimento em PHP orientado a objetos;
+- [Conhecimento em PHP orientado a objetos](https://devcontratado.com/blog/engenharia-de-software/orientacao-a-objetos);
 - Conhecimento em Composer.
 
 ### Introdução
