@@ -1,9 +1,9 @@
 ---
-title: 'Injeção de dependencia: Design Patterns - o que é? porque usar? Resumo com exemplos em PHP!'
+title: 'Injeção de dependência: Design Patterns - o que é? porque usar? Resumo com exemplos em PHP!'
 date: '2023-11-26'
 tags: ['dependency-injection', 'design-patterns','php', 'padroes-de-projeto', 'injecao-de-dependencia']
 draft: false
-summary: 'Neste artigo você aprenderá o que é o design pattern injeção de dependencia e como utiliza-lo para escrever códigos melhores.'
+summary: 'Neste artigo você aprenderá o que é o design pattern injeção de dependência e como utiliza-lo para escrever códigos melhores.'
 image: '/static/images/injecao-de-dependencia.jpg'
 ---
 
@@ -37,7 +37,7 @@ class Exemplo implements
 
     public function __construct()
     {
-        // Criação de dependencia interna
+        // Criação de dependência interna
         $this->dependenciaA = new DependenciaA;
     }
 }
@@ -70,7 +70,7 @@ class Exemplo implements
 
 #### Injeção de dependência por método (Method Injection)
 
-Uma abordagem também frequente é a instanciação de dependências por um método comum (Diferente do construtor). Essa abordagem tende a ser melhor do que uma criação de dependencia interna (sem injeção de dependencia), mas ainda não costuma funcionar tão bem como a abordagem anterior por que podemos criar nosso objeto sem saber tudo que realmente é necessário para utiliza-lo.
+Uma abordagem também frequente é a instanciação de dependências por um método comum (Diferente do construtor). Essa abordagem tende a ser melhor do que uma criação de dependência interna (sem injeção de dependência), mas ainda não costuma funcionar tão bem como a abordagem anterior por que podemos criar nosso objeto sem saber tudo que realmente é necessário para utiliza-lo.
 
 ```php
 
