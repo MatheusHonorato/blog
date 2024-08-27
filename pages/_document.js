@@ -130,7 +130,7 @@ class MyDocument extends Document {
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
           <div className="flex flex-col items-center black-banner">
-            <a href="https://go.hotmart.com/N61245410E" rel="nofollow">
+            <a href="https://go.hotmart.com/N61245410E" rel="nofollow noreferrer" target="_blank">
               <img src="/static/images/banner.jpg" border="0" width="728" height="90" />
             </a>
           </div>
