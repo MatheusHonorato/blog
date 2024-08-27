@@ -62,9 +62,13 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
 
-          <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css"/>
-          <link href="/static/style.mailchip.form.css" rel="stylesheet" type="text/css"/>
-          
+          <link
+            href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link href="/static/style.mailchip.form.css" rel="stylesheet" type="text/css" />
+
           <meta
             name="google-site-verification"
             content="8dHMZxup35moYXc7M8xYaL9v-dIuQbHrZtO9PWUL3lo"
@@ -81,19 +85,24 @@ class MyDocument extends Document {
             });
           `,
             }}
-          />  
+          />
 
-          <script id="mcjs"
+          <script
+            id="mcjs"
             dangerouslySetInnerHTML={{
               __html: `
               !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/98c7c1316ae9b9e57376707b9/4771f8a1d59b26a81c14da42c.js");
               `,
             }}
-          />   
+          />
 
-          <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"/>      
+          <script
+            type="text/javascript"
+            src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+          />
 
-          <script type="text/javascript"
+          <script
+            type="text/javascript"
             dangerouslySetInnerHTML={{
               __html: `
                 (function($) {
@@ -115,13 +124,15 @@ class MyDocument extends Document {
                 var $mcj = jQuery.noConflict(true);
               `,
             }}
-          />    
+          />
 
           <meta name="msvalidate.01" content="DA649940CBACA628883414C03E3EC298" />
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
-          <div className="flex flex-col items-center yellow-banner">
-            <a href="https://go.hotmart.com/S61245531F" rel="nofollow"><img src="http://celke.com.br/clms/assets/imagens/img_hotmart/84566/curso_php_developer_768x90_v1.jpg" border="0" width="728" height="90" /></a>
+          <div className="flex flex-col items-center black-banner">
+            <a href="https://go.hotmart.com/N61245410E" rel="nofollow">
+              <img src="/static/images/banner.jpg" border="0" width="728" height="90" />
+            </a>
           </div>
           <Main />
           <NextScript />
