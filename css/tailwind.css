@@ -22,9 +22,9 @@ html {
   padding-top: 85.313px;
 }
 
-.yellow-banner {
+.black-banner {
   position: fixed;
   width: 100%;
-  background-color: #FAA72F;
+  background-color: #000;
   z-index: 10;
 }
