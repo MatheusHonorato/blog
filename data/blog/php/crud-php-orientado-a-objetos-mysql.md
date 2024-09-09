@@ -1,5 +1,5 @@
 ---
-title: CRUD PHP POO (Orientado a objetos) com MySQL (PHP Vanilla)
+title: CRUD PHP POO (Orientado a objetos) com MySQL (PHP 8 Vanilla)
 date: '2024-09-09'
 tags: ['php', 'poo', 'crud', 'mysql', 'pdo', 'sql']
 draft: false
