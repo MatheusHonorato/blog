@@ -6,7 +6,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import MailChipForm from '@/components/MailChipForm'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 7
 const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export async function getStaticProps() {
@@ -93,7 +93,7 @@ export default function Home({ posts }) {
           </Link>
         </div>
       )}
-      <MailChipForm/>
+      <MailChipForm />
     </>
   )
 }

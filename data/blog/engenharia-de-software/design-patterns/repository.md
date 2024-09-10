@@ -68,7 +68,6 @@ No exemplo acima a classe de repositório é uma classe anêmica, ela atua somen
 
 ### Exemplo de repositório específico
 
-
 ```php
 <?php
 

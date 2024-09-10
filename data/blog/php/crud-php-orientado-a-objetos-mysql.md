@@ -4,7 +4,7 @@ date: '2024-09-09'
 tags: ['php', 'poo', 'crud', 'mysql', 'pdo', 'sql']
 draft: false
 summary: 'Neste artigo você aprenderá como desenvolver um CRUD com PHP Orientado a objetos, MySQL  e PDO'
-image: '/static/images/crud-php.jpg'
+image: '/static/images/crud-poo.jpg'
 ---
 
 ### Introdução

@@ -4,7 +4,7 @@ date: '2024-08-23'
 tags: ['php', 'rotas', 'poo']
 draft: false
 summary: 'Neste artigo você aprenderá como desenvolver um sistema de rotas com PHP.'
-image: '/static/images/crud-php.jpg'
+image: '/static/images/routes.jpg'
 ---
 
 ### Pré-requisitos:
