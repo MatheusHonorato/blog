@@ -93,5 +93,3 @@ DBConnection::getInstance();
 
 - Acaba aumentando o acoplamento do código já que varias partes do sistema dependenm da mesma instância;
 - Quebra principio da responsabilidade única, por que resolve dois problemas de uma só vez (garantir que uma classe tenha somente uma instância, possibilitar um ponto de acesso global a esta instância).
-
-/// singleton faz sentido no php ?
