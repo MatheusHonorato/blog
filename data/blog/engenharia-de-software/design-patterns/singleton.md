@@ -40,7 +40,7 @@ namespace App\DB;
 
 class DBConnection
 {
-    // Propriedade estatica privada para armazenar instância do Singleton
+    // Propriedade estática privada para armazenar instância do Singleton
     private static \PDO $instance;
 
     private static string $host = "db";
