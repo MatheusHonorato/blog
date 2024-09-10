@@ -1,5 +1,5 @@
 ---
-title: 'Repository: Design Patterns - o que é? porque usar? Resumo com exemplos em PHP!'
+title: 'Repository: Design Patterns - o que é? Por que usar? Resumo com exemplos em PHP!'
 date: '2023-11-17'
 tags: ['repository', 'design-patterns', 'padroes-de-projeto', 'php']
 draft: false

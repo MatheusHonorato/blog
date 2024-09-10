@@ -9,8 +9,9 @@ image: '/static/images/crud-php.jpg'
 
 ### Pré-requisitos:
 
-- Noções básicas de desenvolvimento web;
+- Noções básicas de desenvolvimento web (Cliente/Servidor);
 - [Conhecimento em PHP orientado a objetos](https://devcontratado.com/blog/engenharia-de-software/orientacao-a-objetos);
+- [Expressões regulares](https://devcontratado.com/blog/ciencia-da-computacao/regex-expressoes-regulares)
 - Conhecimento em Composer.
 
 ### Introdução

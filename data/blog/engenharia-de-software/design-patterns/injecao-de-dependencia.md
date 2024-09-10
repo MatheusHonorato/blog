@@ -1,5 +1,5 @@
 ---
-title: 'Injeção de dependência: Design Patterns - o que é? porque usar? Resumo com exemplos em PHP!'
+title: 'Injeção de dependência: Design Patterns - o que é? Por que usar? Resumo com exemplos em PHP!'
 date: '2023-11-26'
 tags: ['dependency-injection', 'design-patterns','php', 'padroes-de-projeto', 'injecao-de-dependencia']
 draft: false

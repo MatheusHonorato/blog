@@ -1,5 +1,5 @@
 ---
-title: 'Container IoC: Design Patterns - o que é? porque usar? Resumo com exemplos em PHP!'
+title: 'Container IoC: Design Patterns - o que é? Por que usar? Resumo com exemplos em PHP!'
 date: '2023-11-26'
 tags: ['container-ioc', 'design-patterns','php', 'padroes-de-projeto']
 draft: false

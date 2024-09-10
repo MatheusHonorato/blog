@@ -1,5 +1,5 @@
 ---
-title: 'Design Patterns - o que é? porque usar?'
+title: 'Design Patterns - o que é? Por que usar?'
 date: '2023-10-18'
 tags: ['design-patterns', 'design-pattern', 'padroes-de-projeto', 'padrao-de-projeto']
 draft: false

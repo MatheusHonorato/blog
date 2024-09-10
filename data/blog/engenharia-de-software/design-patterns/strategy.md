@@ -1,5 +1,5 @@
 ---
-title: 'Strategy: Design Patterns - o que é? porque usar? Resumo com exemplos em PHP!'
+title: 'Strategy: Design Patterns - o que é? Por que usar? Resumo com exemplos em PHP!'
 date: '2023-11-15'
 tags: ['strategy', 'design-patterns', 'padroes-de-projeto', 'php']
 draft: false
