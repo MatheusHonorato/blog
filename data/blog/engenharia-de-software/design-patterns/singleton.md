@@ -72,7 +72,7 @@ class DBConnection
     {
         // Condição para gerar nova instância somente na primeira chamada
         if(!isset(self::$instance)) {
-            return self::$instance = new \PDO("mysql:host=".self::$host.";dbname=".self::$db, self::$user, self::$password);
+            self::$instance = new \PDO("mysql:host=".self::$host.";dbname=".self::$db, self::$user, self::$password);
         }
         return self::$instance;
     }
