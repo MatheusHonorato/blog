@@ -350,7 +350,7 @@ Para focarmos no entendimento da lógica de CRUD iremos abstrair a implementaç�
     }
     ```
 
-    Classe responsável por obter conexão com banco de dados utilizando PDO. DbConnection é uma implementação do padrão Monostate, variação do padrão [Singleton](https://www.devmedia.com.br/php-singleton-aplicando-o-padrao-de-projeto-na-pratica/28469). Em DBconnection diferente do Singleton convencional conseguimos criar multiplas instancias da classe, mas ainda temos o compartilhamento de estado entre todos os objetos.
+    Classe responsável por obter conexão com banco de dados utilizando PDO. DbConnection é uma implementação do padrão [Monostate](https://devcontratado.com/blog/engenharia-de-software/design-patterns/monostate), variação do padrão [Singleton](https://devcontratado.com/blog/engenharia-de-software/design-patterns/singleton). Em DBconnection diferente do [Singleton](https://devcontratado.com/blog/engenharia-de-software/design-patterns/singleton) convencional conseguimos criar multiplas instancias da classe, mas ainda temos o compartilhamento de estado entre todos os objetos.
     Observação: Em um projeto real em produção não deixe dados de acesso como usuário e senha escritos explicitamente no código, utilize alguma solução como variáveis de ambiente.
 
   - Enums
