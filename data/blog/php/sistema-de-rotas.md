@@ -12,11 +12,11 @@ image: '/static/images/routes.jpg'
 - Noções básicas de desenvolvimento web (Cliente/Servidor);
 - [Conhecimento em PHP orientado a objetos](https://devcontratado.com/blog/engenharia-de-software/orientacao-a-objetos);
 - [Expressões regulares](https://devcontratado.com/blog/ciencia-da-computacao/regex-expressoes-regulares)
-- Conhecimento em Composer.
+- Conhecimento em [Composer](https://getcomposer.org).
 
 ### Introdução
 
-Fala, galera! Você já se perguntou como funciona um sistema de rotas? Se você já trabalha com PHP orientado a objetos, provavelmente, já usou uma biblioteca de rotas ou um framework que implementa essa funcionalidade. Neste artigo, vamos criar um sistema de rotas com PHP 8 orientado a objetos para entender melhor como uma ferramenta desse tipo funciona. Obs: O objetivo deste projeto é estudo! Se você precisa dessa funcionalidade para um projeto no trabalho, recomendamos a utilização de uma solução mais robusta como o Slim framework ou, se precisar de um framework completo, Laravel.
+Fala, galera! Você já se perguntou como funciona um sistema de rotas? Se você já trabalha com PHP orientado a objetos, provavelmente, já usou uma biblioteca de rotas ou um framework que implementa essa funcionalidade. Neste artigo, vamos criar um sistema de rotas com PHP 8 orientado a objetos para entender melhor como uma ferramenta desse tipo funciona. Obs: O objetivo deste projeto é estudo! Se você precisa dessa funcionalidade para um projeto no trabalho, recomendamos a utilização de uma solução mais robusta como o [Slim framework](https://www.slimframework.com) ou, se precisar de um framework completo, [Laravel](https://laravel.com).
 
 ### Estrutura do Projeto
 
