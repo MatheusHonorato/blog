@@ -1,10 +1,10 @@
 ---
-title: 'Singleton: Design Patterns - o que é? Por que usar? Quando utilizar. Resumo com exemplos em PHP!'
+title: 'Singleton: Design Patterns - o que é? Por que usar? Resumo com exemplos em PHP!'
 date: '2024-09-10'
 tags: ['singleton', 'design-patterns', 'php']
 draft: false
 summary: 'Neste artigo você aprenderá o que é o design pattern Singleton e como utiliza-lo.'
-image: '/static/images/design-patterns.jpg'
+image: '/static/images/singleton.jpg'
 ---
 
 Fala, galera! Neste artigo iremos aprender um pouco mais sobre o padrão Singleton e como implementa-lo na linguagem de programação PHP.
@@ -17,7 +17,7 @@ Fala, galera! Neste artigo iremos aprender um pouco mais sobre o padrão Singlet
 
 ### Definição
 
-Singleton é um design pattern criacional utilizado para garantir que uma classe tenha somente uma instância, enquanto possibilita um ponto de acesso global. Singleton é muito utilizado para gerenciar conexões a banco de dados, garantindo que não sejam abertas varias conexões indiscriminadamente.
+Singleton é um design pattern [criacional](https://refactoring.guru/pt-br/design-patterns/creational-patterns) utilizado para garantir que uma classe tenha somente uma instância, enquanto possibilita um ponto de acesso global. Singleton é muito utilizado para gerenciar conexões a banco de dados, garantindo que não sejam abertas varias conexões indiscriminadamente.
 Sua estrutura basica se define da seguinte maneira:
 
 - Popriedade estática privada para armazenar a instância que gerencia;
