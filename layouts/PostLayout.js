@@ -43,6 +43,17 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               </div>
             </div>
           </header>
+          <div className="flex flex-col items-center bg-black smt-10">
+            <a href="https://go.hotmart.com/N61245410E" rel="nofollow noreferrer" target="_blank">
+              <img
+                src="/static/images/banner.jpg"
+                border="0"
+                width="728"
+                height="90"
+                alt="Banner"
+              />
+            </a>
+          </div>
           <div
             className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
             style={{ gridTemplateRows: 'auto 1fr' }}
@@ -112,7 +123,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   &larr; Voltar
                 </Link>
               </div>
-              <MailChipForm/>
+              <MailChipForm />
             </footer>
           </div>
         </div>
