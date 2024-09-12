@@ -52,13 +52,13 @@ O `routes.php` define as rotas do sistema em um array de arrays. Cada sub-array 
 
 ```php
 <?php
-use App\Controllers\TesteController;
+use App\Controllers\TestController;
 use App\Enums\HttpMethodEnum;
 
 return [
     // uri, [controlador, método], método http
-    ['teste/{id}',  [TesteController::class, 'index'], HttpMethodEnum::GET],
-    ['teste',  [TesteController::class, 'store'], HttpMethodEnum::POST],
+    ['test',  [TestController::class, 'index'], HttpMethodEnum::GET],
+    ['test',  [TestController::class, 'store'], HttpMethodEnum::POST],
 ];
 ```
 
@@ -267,6 +267,41 @@ class Router
 #### Diretório `src/Controllers`
 
 Armazena os controladores, que recebem as requisições, chamam classes com as regras de negócio e retornam respostas ao usuário.
+
+#### Arquivo `src/Controllers/TestController.php`
+
+Controller contém métodos que são chamados de acordo com a rota acessada no sistema.
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Controllers;
+
+use App\Models\User;
+
+class TestController
+{
+    public function index(): view
+    {
+        // Listando usuários de exemplo
+        $users = User::all();
+
+        // Chamando camada de View
+        return view('users', ['users' => $users]);
+    }
+
+    public function store(): view
+    {
+        // Criando objeto usuário de exemplo
+        $user = new User(...$request->data);
+
+        // Chamando camada de View
+        return view('users', ['users' => $user]);
+    }
+}
+```
 
 #### Diretório `src/Helpers`
 
