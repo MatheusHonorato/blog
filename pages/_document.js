@@ -128,10 +128,6 @@ class MyDocument extends Document {
 
           <meta name="msvalidate.01" content="DA649940CBACA628883414C03E3EC298" />
           <meta property="og:title" content="DevContratado" />
-          <meta
-            property="og:image"
-            content="https://images.unsplash.com/photo-1599507593499-a3f7d7d97667?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          />
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
           <div className="flex flex-col items-center black-banner">
