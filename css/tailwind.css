@@ -33,7 +33,7 @@ html {
   display: none !important;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .black-banner {
     bottom: 0px !important;
   }
