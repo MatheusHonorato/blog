@@ -41,6 +41,10 @@ html {
   margin-top: 0px !important;
 }
 
+.smb-60 {
+  margin-bottom: 0px !important;
+}
+
 @media screen and (max-width: 800px) {
   .black-banner {
     bottom: 0px !important;
@@ -50,5 +54,8 @@ html {
   }
   .smt-10 {
     margin-top: 10px !important;
+  }
+  .smb-60 {
+    margin-bottom: 70px !important;
   }
 }
