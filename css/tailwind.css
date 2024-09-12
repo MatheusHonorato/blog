@@ -32,3 +32,12 @@ html {
 #disqus_recommendations, iframe[sandbox="allow-forms allow-popups allow-same-origin allow-scripts"] {
   display: none !important;
 }
+
+@media screen and (max-width: 768px) {
+  .black-banner {
+    bottom: 0px !important;
+  }
+  #banner-top {
+    padding-top: 0px !important;
+  }
+}
