@@ -9,7 +9,7 @@ image: '/static/images/crud-poo.jpg'
 
 ### Introdução
 
-Fala, galera! Neste artigo vamos aprender como desenvolver uma aplicação [CRUD](https://devcontratado.com/blog/php/crud-php-mysql) orientada a objetos com a extensão PDO, utilizada para se comunicar de maneira nativa com diversos bancos de dados no PHP. Existem diversas maneiras de se implementar um CRUD, esta é uma sujestão de implementação para auxiliar na compreensão sobre como uma aplicação web orientada a objetos pode funcionar, neste projeto utilizamos o padrão de arquitetura [MVC](https://pt.wikipedia.org/wiki/MVC). É importante ter compreensão dos pré-requisitos indicados no tópico a seguir, por que  não é objetivo deste artigo o aprofundamento nestes temas específicos, mas sim da organização e implementação do CRUD orientado a objetos como um todo. Observação: A ideia deste artigo é estudo e discussão de como organizar uma aplicação PHP orientada a objetos, se você deseja implementar sua aplicação para colocar em ambiente de produção recomendamos o uso de uma solução mais robusta como [Slim frameowrk](https://www.slimframework.com) ou [Laravel](https://laravel.com).
+Fala, galera! Neste artigo vamos aprender como desenvolver uma aplicação [CRUD](https://devcontratado.com/blog/php/crud-php-mysql) orientada a objetos com a extensão PDO, utilizada para se comunicar de maneira nativa com diversos bancos de dados no PHP. Existem diversas maneiras de se implementar um CRUD, esta é uma sujestão de implementação para auxiliar na compreensão sobre como uma aplicação web orientada a objetos pode funcionar, neste projeto utilizamos o padrão de arquitetura [MVC](https://devcontratado.com/blog/engenharia-de-software/arquitetura/mvc). É importante ter compreensão dos pré-requisitos indicados no tópico a seguir, por que  não é objetivo deste artigo o aprofundamento nestes temas específicos, mas sim da organização e implementação do CRUD orientado a objetos como um todo. Observação: A ideia deste artigo é estudo e discussão de como organizar uma aplicação PHP orientada a objetos, se você deseja implementar sua aplicação para colocar em ambiente de produção recomendamos o uso de uma solução mais robusta como [Slim frameowrk](https://www.slimframework.com) ou [Laravel](https://laravel.com).
 
 ### Pré-requisitos e conceitos envolvidos:
 
@@ -138,7 +138,7 @@ Para focarmos no entendimento da lógica de CRUD iremos abstrair a implementaç�
 
     -  Controllers
 
-    Armazena classes do tipo controlador, camada intermerdiária da arquitetura MVC responsável por receber requisições, se comunicar com classes de regra de negócio, se necessário, e retornar uma resposta ao usuário.
+    Armazena classes do tipo controlador, camada intermerdiária da arquitetura [MVC](https://devcontratado.com/blog/engenharia-de-software/arquitetura/mvc) responsável por receber requisições, se comunicar com classes de regra de negócio, se necessário, e retornar uma resposta ao usuário.
 
     - AbstractController.php
 
