@@ -19,7 +19,7 @@ Fala, galera! Neste artigo iremos aprender um pouco mais sobre o padrão Front-C
 
 Front-Controller é um design pattern utilizado para concentrar todas as requisições feitas a um sistema em um único ponto de entrada, onde a partir da li a requisição é delegada a outros componentes. É muito comum que o Front-Controller utilize um sistema de rotas para este encaminhamento. Em PHP é comum nomearmos o Front-Controller como index.php.
 
-### Exemplos em PHP
+### Exemplo em PHP
 
 A seguir temos um exemplo de Front-Controller em PHP. O arquivo começa com tudo que precisamos inicializar no sistema. Neste exemplo estamos fazendo um encaminhamento simples diretamente no index.php, então começamos importando TestControler e em seguida o autoload do composer. Em um sistema real neste ponto inicializariamos por exemplo o uso de sessões e constantes. Em seguida fazemos o encaminhamento para outros componentes, aqui resolvemos isto com a função match, mas em um sistema mais robusto provavelmente seria inicializado um sistema de rotas.
 
