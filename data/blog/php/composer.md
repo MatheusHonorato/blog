@@ -3,7 +3,7 @@ title: 'Composer: PHP - O que é? Por que usar? Resumo com exemplos!'
 date: '2024-09-15'
 tags: ['composer', 'php']
 draft: false
-summary: 'Neste artigo você aprenderá o que é o composer como utiliza-lo para escrever códigos melhores.'
+summary: 'Neste artigo você aprenderá o que é o composer e como utiliza-lo para escrever códigos melhores.'
 image: '/static/images/composer.jpg'
 ---
 
