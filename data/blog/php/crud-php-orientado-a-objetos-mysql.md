@@ -1,6 +1,6 @@
 ---
 title: CRUD PHP POO (Orientado a objetos) com MySQL e PDO (PHP 8 Vanilla)
-date: '2024-09-09'
+date: '2024-09-16'
 tags: ['php', 'poo', 'crud', 'mysql', 'pdo', 'sql']
 draft: false
 summary: 'Neste artigo você aprenderá como desenvolver um CRUD com PHP Orientado a objetos, MySQL  e PDO'
